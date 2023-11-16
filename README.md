@@ -16,7 +16,7 @@ Build the image (untagged/latest) and then add a version number tag
 
 ```bash
 docker pull rocker/r-ver:latest
-docker build --platform linux/amd64 -t mrcieu/twosamplemr .
+docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr .
 docker tag mrcieu/twosamplemr mrcieu/twosamplemr:<version_no>
 ```
 
