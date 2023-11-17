@@ -27,3 +27,8 @@ docker login
 docker push mrcieu/twosamplemr:<version_no>
 docker push mrcieu/twosamplemr:latest
 ```
+
+Then run the test script, which checks TwoSampleMR and its Imports and Suggests (i.e., hard and soft) dependency packages will load.
+```
+docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R --vanilla < test.R"
+```
