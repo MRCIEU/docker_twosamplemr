@@ -30,4 +30,7 @@ RUN R -e 'options( \
           R.version["platform"], \
           R.version["arch"], \
           R.version["os"]))); \
-    install.packages("TwoSampleMR", dependencies = TRUE)'
+    install.packages("TwoSampleMR", dependencies = TRUE); \
+    install.packages("ggrepel"); \
+    install.packages("remotes"); \
+    remotes::install_github("variani/finemapr")'
