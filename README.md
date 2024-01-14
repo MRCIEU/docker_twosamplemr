@@ -1,12 +1,12 @@
 # Dockerfile for TwoSampleMR
 
 This is the Dockerfile for [TwoSampleMR dockerhub image](https://hub.docker.com/r/mrcieu/twosamplemr), which can be run with
-```
+```bash
 docker run -it mrcieu/twosamplemr R
 ```
 
-```
 or run a specific tag with, e.g., 0.5.8
+```bash
 docker run -it mrcieu/twosamplemr:0.5.8 R
 ```
 
@@ -29,6 +29,6 @@ docker push mrcieu/twosamplemr:latest
 ```
 
 Then run the test script, which checks TwoSampleMR and its Imports and Suggests (i.e., hard and soft) dependency packages will load.
-```
+```bash
 docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R --vanilla < test.R"
 ```
