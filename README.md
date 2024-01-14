@@ -5,9 +5,9 @@ This is the Dockerfile for [TwoSampleMR dockerhub image](https://hub.docker.com/
 docker run -it mrcieu/twosamplemr R
 ```
 
-or run a specific tag with, e.g., 0.5.6
 ```
-docker run -it mrcieu/twosamplemr:0.5.6 R
+or run a specific tag with, e.g., 0.5.8
+docker run -it mrcieu/twosamplemr:0.5.8 R
 ```
 
 If you are updating this and *don't* have access to the mrcieu dockerhub organization please send your dockerhub username to @t0mrg.
