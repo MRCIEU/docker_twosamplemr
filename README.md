@@ -1,6 +1,8 @@
 # Dockerfile for TwoSampleMR
 
 This is the Dockerfile for [TwoSampleMR dockerhub image](https://hub.docker.com/r/mrcieu/twosamplemr), which can be run with
+## Usage
+
 
 ```bash
 docker run -it mrcieu/twosamplemr R
@@ -11,6 +13,8 @@ or run a specific tag with, e.g., 0.5.8
 ```bash
 docker run -it mrcieu/twosamplemr:0.5.8 R
 ```
+
+## Developers
 
 If you are updating this and *don't* have access to the mrcieu dockerhub organization please send your dockerhub username to @t0mrg.
 
