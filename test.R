@@ -2,6 +2,8 @@
 # Loads TwoSampleMR and all its dependency packages
 library(TwoSampleMR)
 
+packageVersion("TwoSampleMR")
+
 # Imports packages (from TwoSampleMR DESCRIPTION file)
 library(cowplot)
 library(data.table)
