@@ -28,6 +28,14 @@ docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr .
 docker tag mrcieu/twosamplemr mrcieu/twosamplemr:<version_no>
 ```
 
+### Run the test script
+
+Then run the test script, which checks TwoSampleMR and its Imports and Suggests (i.e., hard and soft) dependency packages will load.
+
+```bash
+docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R --vanilla < test.R"
+```
+
 ### Push to DockerHub
 
 Then login to DockerHub, and push both the version numbered tag and the latest tag (this is necessary so that the mrcieu/twosamplemr image is the latest, but we also show version numbers in the tags).
@@ -36,12 +44,4 @@ Then login to DockerHub, and push both the version numbered tag and the latest t
 docker login
 docker push mrcieu/twosamplemr:<version_no>
 docker push mrcieu/twosamplemr:latest
-```
-
-### Run the test script
-
-Then run the test script, which checks TwoSampleMR and its Imports and Suggests (i.e., hard and soft) dependency packages will load.
-
-```bash
-docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R --vanilla < test.R"
 ```
