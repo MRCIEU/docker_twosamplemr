@@ -36,6 +36,8 @@ Then run the test script, which checks TwoSampleMR and its Imports and Suggests 
 docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R --vanilla < test.R"
 ```
 
+And check the version of TwoSampleMR is the latest one you expect.
+
 ### Push to DockerHub
 
 Then login to DockerHub, and push both the version numbered tag and the latest tag (this is necessary so that the mrcieu/twosamplemr image is the latest, but we also show version numbers in the tags).
