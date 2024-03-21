@@ -33,7 +33,7 @@ docker tag mrcieu/twosamplemr mrcieu/twosamplemr:<version_no>
 Then run the test script, which checks TwoSampleMR and its Imports and Suggests (i.e., hard and soft) dependency packages will load.
 
 ```bash
-docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R --vanilla < test.R"
+docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R CMD BATCH test.R"
 ```
 
 And check the version of TwoSampleMR is the latest one you expect.
