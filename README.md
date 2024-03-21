@@ -16,7 +16,7 @@ docker run -it mrcieu/twosamplemr:0.5.11 R
 
 ## Developers
 
-If you are updating this and *don't* have access to the mrcieu dockerhub organization please send your dockerhub username to [@t0mrg](https://github.com/t0mrg).
+If you are updating this and _don't_ have access to the mrcieu dockerhub organization please send your dockerhub username to [@t0mrg](https://github.com/t0mrg).
 
 Build the image (untagged/latest) and then add a version number tag as follows.
 
