@@ -23,7 +23,7 @@ If you are updating this and _don't_ have access to the mrcieu dockerhub organiz
 Build the image (untagged/latest) and then add a version number tag as follows.
 
 ```bash
-docker pull rocker/r-ver:latest
+docker pull --platform linux/amd64 rocker/r-ver:latest
 docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr .
 docker tag mrcieu/twosamplemr mrcieu/twosamplemr:<version_no>
 ```
