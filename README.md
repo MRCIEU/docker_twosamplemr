@@ -52,7 +52,7 @@ And check the version of TwoSampleMR is the latest one you expect.
 #### Running the test script for the arm64 image
 
 ```bash
-docker run --platform linux/arm64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R CMD BATCH test.R test-arm64.Rout"
+docker run --platform linux/arm64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:multiarch /bin/bash -c "R CMD BATCH test.R test-arm64.Rout"
 ```
 
 ### Push to DockerHub
