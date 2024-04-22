@@ -43,17 +43,22 @@ docker buildx build --pull --platform linux/arm64,linux/amd64 --tag mrcieu/twosa
 
 Then run the test script, which checks TwoSampleMR and its Imports and Suggests (i.e., hard and soft) dependency packages will load.
 
+For the single architecture image run the following.
+
 ```bash
 docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R CMD BATCH test.R"
 ```
 
-And check the version of TwoSampleMR is the latest one you expect.
+In the *test.Rout* file check that the version of TwoSampleMR is the latest one you expect.
 
-#### Running the test script for the arm64 image
+#### Running the test script for the multiarch image
 
 ```bash
+docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:multiarch /bin/bash -c "R CMD BATCH test.R test-amd64.Rout"
 docker run --platform linux/arm64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:multiarch /bin/bash -c "R CMD BATCH test.R test-arm64.Rout"
 ```
+
+In the *test-amd64.Rout* and *test-arm64.Rout* files check that the version of TwoSampleMR is the latest one you expect.
 
 ### Push to DockerHub
 
