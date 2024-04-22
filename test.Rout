@@ -20,14 +20,14 @@ Type 'q()' to quit R.
 > # Test script
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.5.11 
-[>] New: Option to use non-European LD reference panels for clumping etc
-[>] Some studies temporarily quarantined to verify effect allele
-[>] See news(package = 'TwoSampleMR') and https://gwas.mrcieu.ac.uk for further details
+TwoSampleMR version 0.6.0 
+[>] New: Improved API performance and stability
+[>] New: Authentication required for all OpenGWAS queries from 1st May 2024
+[>] For guidance see https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication
 
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.5.11’
+[1] ‘0.6.0’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -192,4 +192,4 @@ replacing previous import ‘Matrix::head’ by ‘utils::head’ when loading �
 > 
 > proc.time()
    user  system elapsed 
-  2.990   1.945   2.974 
+  4.067   1.592   4.310 
