@@ -35,8 +35,7 @@ For the multi-architecture image you must enable the containerd image store in D
 Build the image (untagged/latest) and then add a version number tag as follows.
 
 ```bash
-docker buildx build --pull --platform linux/arm64,linux/amd64 --tag mrcieu/twosamplemr:<version_no> .
-# docker buildx build --pull --push --platform linux/arm64,linux/amd64 --tag mrcieu/twosamplemr:multiarch .
+docker buildx build --pull --platform linux/arm64,linux/amd64 --tag mrcieu/twosamplemr:multiarch .
 ```
 
 ### Run the test script
@@ -70,4 +69,10 @@ Note this only applies to the single architecture image.
 docker login
 docker push mrcieu/twosamplemr:<version_no>
 docker push mrcieu/twosamplemr:latest
+```
+
+Push the multiarchitecture image with
+
+```bash
+docker push mrcieu/twosamplemr:multiarch
 ```
