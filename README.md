@@ -20,12 +20,23 @@ If you are updating this and _don't_ have access to the mrcieu dockerhub organiz
 
 ### Build the image
 
-Build the image (untagged/latest) and then add a version number tag as follows.
+#### Building a solely amd64 architecture image
 
 ```bash
 docker pull --platform linux/amd64 rocker/r-ver:latest
 docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr .
 docker tag mrcieu/twosamplemr mrcieu/twosamplemr:<version_no>
+```
+
+#### Building a multi-architecture image
+
+For the multi-architecture image you must enable the containerd image store in Docker Desktop settings.
+
+Build the image (untagged/latest) and then add a version number tag as follows.
+
+```bash
+docker buildx build --pull --platform linux/arm64,linux/amd64 --tag mrcieu/twosamplemr:<version_no> .
+# docker buildx build --pull --push --platform linux/arm64,linux/amd64 --tag mrcieu/twosamplemr:multiarch .
 ```
 
 ### Run the test script
@@ -38,9 +49,17 @@ docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosa
 
 And check the version of TwoSampleMR is the latest one you expect.
 
+#### Running the test script for the arm64 image
+
+```bash
+docker run --platform linux/arm64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R CMD BATCH test.R test-arm64.Rout"
+```
+
 ### Push to DockerHub
 
 Then login to DockerHub, and push both the version numbered tag and the latest tag (this is necessary so that the mrcieu/twosamplemr image is the latest, but we also show version numbers in the tags).
+
+Note this only applies to the single architecture image.
 
 ```bash
 docker login
