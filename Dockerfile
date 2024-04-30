@@ -21,7 +21,7 @@ RUN apt-get update && \
 # be built will be obtained).
 
 RUN R -e 'options( \
-    repos = c(universe = "https://mrcieu.r-universe.dev/bin/linux/jammy/4.3/", \
+    repos = c(universe = "https://mrcieu.r-universe.dev/bin/linux/jammy/4.4/", \
         CRAN = "https://packagemanager.posit.co/cran/__linux__/jammy/latest"), \
     HTTPUserAgent = sprintf( \
         "R/%s R (%s)", \
