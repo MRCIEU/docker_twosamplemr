@@ -22,14 +22,14 @@ Type 'q()' to quit R.
 > # Test script
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.0 
+TwoSampleMR version 0.6.1 
 [>] New: Improved API performance and stability
 [>] New: Authentication required for all OpenGWAS queries from 1st May 2024
 [>] For guidance see https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication
 
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.0’
+[1] ‘0.6.1’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -107,6 +107,11 @@ Loading 'meta' package (version 7.0-0).
 Type 'help(meta)' for a brief overview.
 Readers of 'Meta-Analysis with R (Use R!)' should install
 older version of 'meta' package: https://tinyurl.com/dt4y5drs
+Warning message:
+In check_dep_version() : ABI version mismatch: 
+lme4 was built with Matrix ABI version 0
+Current Matrix ABI version is 1
+Please re-install lme4 from source or restore original ‘Matrix’ package
 > library(mr.raps)
 > library(MRMix)
 > library(MRPRESSO)
@@ -186,12 +191,6 @@ The following object is masked from ‘package:dplyr’:
     matches
 
 > 
-> # Check finemapr loads
-> library(ggrepel)
-> library(finemapr)
-Warning message:
-replacing previous import ‘Matrix::head’ by ‘utils::head’ when loading ‘finemapr’ 
-> 
 > proc.time()
    user  system elapsed 
-  3.056   1.565   3.330 
+  3.141   1.577   3.219 
