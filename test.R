@@ -36,7 +36,3 @@ library(markdown)
 library(MRInstruments)
 library(randomForest)
 library(testthat)
-
-# Check finemapr loads
-library(ggrepel)
-library(finemapr)
