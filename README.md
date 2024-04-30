@@ -45,7 +45,7 @@ Then run the test script, which checks TwoSampleMR and its Imports and Suggests 
 For the single architecture image run the following.
 
 ```bash
-docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R CMD BATCH test.R"
+docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:latest /bin/bash -c "R CMD BATCH test.R test-amd64.Rout"
 ```
 
 In the *test.Rout* file check that the version of TwoSampleMR is the latest one you expect.
