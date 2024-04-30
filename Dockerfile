@@ -21,8 +21,8 @@ RUN apt-get update && \
 # be built will be obtained).
 
 RUN R -e 'options( \
-    repos = c(universe = "https://mrcieu.r-universe.dev/bin/linux/jammy/4.4/", \
-        CRAN = "https://packagemanager.posit.co/cran/__linux__/jammy/latest"), \
+    repos = c(universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/", \
+        CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"), \
     HTTPUserAgent = sprintf( \
         "R/%s R (%s)", \
         getRversion(), \
