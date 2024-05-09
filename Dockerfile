@@ -11,7 +11,8 @@ RUN apt-get update && \
         libcairo2-dev \
         libxt-dev \
         libharfbuzz-dev \
-        libtiff-dev
+        libtiff-dev \
+        libstdc++6
 
 # Wait until MRCIEU R-Universe has built latest version of the TwoSampleMR binary
 # Should be 1 hour or maybe overnight
