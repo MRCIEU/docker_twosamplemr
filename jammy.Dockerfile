@@ -22,6 +22,7 @@ RUN apt-get update && \
 
 RUN R -e 'options( \
     repos = c(universe = "https://mrcieu.r-universe.dev", \
+        binaries = "https://p3m.dev/cran/__linux__/jammy/latest", \
         CRAN = "https://cloud.r-project.org"), \
     HTTPUserAgent = sprintf( \
         "R/%s R (%s)", \
