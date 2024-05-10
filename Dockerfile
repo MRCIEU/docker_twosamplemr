@@ -23,7 +23,7 @@ RUN apt-get update && \
 
 RUN R -e 'options( \
     repos = c(universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/", \
-        CRAN = "https://packagemanager.posit.co/cran/__linux__/noble/latest"), \
+        CRAN = "https://p3m.dev/cran/__linux__/noble/latest"), \
     HTTPUserAgent = sprintf( \
         "R/%s R (%s)", \
         getRversion(), \
