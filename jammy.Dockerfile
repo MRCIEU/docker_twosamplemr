@@ -28,7 +28,7 @@ RUN R -e 'options( \
         "R/%s R (%s)", \
         getRversion(), \
         paste(getRversion(), \
-          R.version["platform"], \
-          R.version["arch"], \
-          R.version["os"]))); \
+        R.version["platform"], \
+        R.version["arch"], \
+        R.version["os"]))); \
     install.packages("TwoSampleMR", dependencies = TRUE)'
