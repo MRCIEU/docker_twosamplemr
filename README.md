@@ -24,7 +24,7 @@ If you are updating this and _don't_ have access to the mrcieu dockerhub organiz
 
 ```bash
 docker pull --platform linux/amd64 rocker/r-ver:latest
-docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr .
+docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr -f jammy.Dockerfile .
 docker tag mrcieu/twosamplemr mrcieu/twosamplemr:<version_no>
 ```
 
