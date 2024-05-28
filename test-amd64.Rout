@@ -22,14 +22,16 @@ Type 'q()' to quit R.
 > # Test script
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.2 
-[>] New: Improved API performance and stability
-[>] New: Authentication required for all OpenGWAS queries from 1st May 2024
-[>] For guidance see https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication
+TwoSampleMR version 0.6.3 
 
+  [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
+  [>] Major upgrades to our servers completed to improve service and stability.
+  [>] We need your help to shape our emerging roadmap!
+      Please take 2 minutes to give us feedback -
+      https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.2’
+[1] ‘0.6.3’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -71,10 +73,11 @@ The following object is masked from ‘package:dplyr’:
 > library(gtable)
 > library(ieugwasr)
 OpenGWAS updates:
-  Date: 2024-03-07
-  [>] There is exceptional load on the OpenGWAS servers.
-  [>] Urgent infrastructure development being performed.
-  [>] See local options for analysis: https://mrcieu.github.io/gwasvcf/.
+  Date: 2024-05-17
+  [>] OpenGWAS is growing!
+  [>] Please take 2 minutes to give us feedback -
+  [>] It will help directly shape our emerging roadmap
+  [>] https://forms.office.com/e/eSr7EFAfCG
 
 Attaching package: ‘ieugwasr’
 
@@ -188,4 +191,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  3.738   1.800   3.973 
+  3.587   1.727   3.893 
