@@ -22,8 +22,8 @@ RUN apt-get update && \
 # be built will be obtained).
 
 RUN R -e 'options( \
-    repos = c(universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/", \
-        CRAN = "https://p3m.dev/cran/__linux__/noble/latest"), \
+    repos = c(universe = "https://mrcieu.r-universe.dev/", \
+        CRAN = "https://cloud.r-project.org"), \
     HTTPUserAgent = sprintf( \
         "R/%s R (%s)", \
         getRversion(), \
