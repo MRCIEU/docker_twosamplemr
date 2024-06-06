@@ -20,6 +20,14 @@ If you are updating this and _don't_ have access to the mrcieu dockerhub organiz
 
 ### Build the image
 
+First check the current base of `rocker/r-ver:latest` with
+
+```bash
+docker run --platform linux/amd64 rocker/r-ver:latest cat /etc/lsb-release
+```
+
+Currently it uses Ubuntu Jammy Jellyfish 22.04.4 LTS. This tells you if you can use the Linux binaries from r-universe which are built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match.
+
 #### Building a solely amd64 architecture image
 
 ```bash
