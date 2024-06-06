@@ -43,7 +43,7 @@ For the multi-architecture image you must enable the containerd image store in D
 Build the image (untagged/latest) and then add a version number tag as follows.
 
 ```bash
-docker buildx build --pull --platform linux/arm64,linux/amd64 --tag mrcieu/twosamplemr:<version_no> .
+docker buildx build --pull --platform linux/arm64,linux/amd64 --tag mrcieu/twosamplemr:multiarch .
 ```
 
 ### Run the test script
@@ -61,8 +61,8 @@ In the *test.Rout* file check that the version of TwoSampleMR is the latest one 
 #### Running the test script for the multiarch image
 
 ```bash
-docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:<version_no> /bin/bash -c "R CMD BATCH test.R test-amd64.Rout"
-docker run --platform linux/arm64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:<version_no> /bin/bash -c "R CMD BATCH test.R test-arm64.Rout"
+docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:multiarch /bin/bash -c "R CMD BATCH test.R test-amd64.Rout"
+docker run --platform linux/arm64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:multiarch /bin/bash -c "R CMD BATCH test.R test-arm64.Rout"
 ```
 
 In the *test-amd64.Rout* and *test-arm64.Rout* files check that the version of TwoSampleMR is the latest one you expect.
