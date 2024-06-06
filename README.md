@@ -26,7 +26,7 @@ First check the current base of `rocker/r-ver:latest` with
 docker run --platform linux/amd64 rocker/r-ver:latest cat /etc/lsb-release
 ```
 
-Currently it uses Ubuntu Jammy Jellyfish 22.04.4 LTS. This tells you if you can use the Linux binaries from r-universe which are built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match.
+Currently it uses Ubuntu Jammy Jellyfish 22.04.4 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of Noble Numbat during which these versions do not match.
 
 #### Building a solely amd64 architecture image
 
