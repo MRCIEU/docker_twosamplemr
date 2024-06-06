@@ -1,7 +1,7 @@
 
-R version 4.3.3 (2024-02-29) -- "Angel Food Cake"
+R version 4.4.0 (2024-04-24) -- "Puppy Cup"
 Copyright (C) 2024 The R Foundation for Statistical Computing
-Platform: aarch64-unknown-linux-gnu (64-bit)
+Platform: aarch64-unknown-linux-gnu
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -22,14 +22,16 @@ Type 'q()' to quit R.
 > # Test script
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.0 
-[>] New: Improved API performance and stability
-[>] New: Authentication required for all OpenGWAS queries from 1st May 2024
-[>] For guidance see https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication
+TwoSampleMR version 0.6.4 
 
+  [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
+  [>] Major upgrades to our servers completed to improve service and stability.
+  [>] We need your help to shape our emerging roadmap!
+      Please take 2 minutes to give us feedback -
+      https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.0’
+[1] ‘0.6.4’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -71,10 +73,11 @@ The following object is masked from ‘package:dplyr’:
 > library(gtable)
 > library(ieugwasr)
 OpenGWAS updates:
-  Date: 2024-03-07
-  [>] There is exceptional load on the OpenGWAS servers.
-  [>] Urgent infrastructure development being performed.
-  [>] See local options for analysis: https://mrcieu.github.io/gwasvcf/.
+  Date: 2024-05-17
+  [>] OpenGWAS is growing!
+  [>] Please take 2 minutes to give us feedback -
+  [>] It will help directly shape our emerging roadmap
+  [>] https://forms.office.com/e/eSr7EFAfCG
 
 Attaching package: ‘ieugwasr’
 
@@ -94,7 +97,98 @@ The following object is masked from ‘package:dplyr’:
     select
 
 > library(MendelianRandomization)
-Error: package or namespace load failed for ‘MendelianRandomization’ in dyn.load(file, DLLpath = DLLpath, ...):
- unable to load shared object '/usr/local/lib/R/site-library/MendelianRandomization/libs/MendelianRandomization.so':
-  /usr/local/lib/R/site-library/MendelianRandomization/libs/MendelianRandomization.so: cannot open shared object file: No such file or directory
-Execution halted
+
+Attaching package: ‘MendelianRandomization’
+
+The following objects are masked from ‘package:TwoSampleMR’:
+
+    mr_ivw, mr_median
+
+> library(meta)
+Loading required package: metadat
+Loading 'meta' package (version 7.0-0).
+Type 'help(meta)' for a brief overview.
+Readers of 'Meta-Analysis with R (Use R!)' should install
+older version of 'meta' package: https://tinyurl.com/dt4y5drs
+> library(mr.raps)
+> library(MRMix)
+> library(MRPRESSO)
+> library(pbapply)
+> library(psych)
+
+Attaching package: ‘psych’
+
+The following objects are masked from ‘package:ggplot2’:
+
+    %+%, alpha
+
+> library(RadialMR)
+> library(reshape2)
+
+Attaching package: ‘reshape2’
+
+The following objects are masked from ‘package:data.table’:
+
+    dcast, melt
+
+> library(rmarkdown)
+> 
+> # Suggests packages (from TwoSampleMR DESCRIPTION file)
+> library(Cairo)
+> library(car)
+Loading required package: carData
+
+Attaching package: ‘car’
+
+The following object is masked from ‘package:psych’:
+
+    logit
+
+The following object is masked from ‘package:dplyr’:
+
+    recode
+
+> library(markdown)
+> library(MRInstruments)
+> library(randomForest)
+randomForest 4.7-1.1
+Type rfNews() to see new features/changes/bug fixes.
+
+Attaching package: ‘randomForest’
+
+The following object is masked from ‘package:psych’:
+
+    outlier
+
+The following object is masked from ‘package:gridExtra’:
+
+    combine
+
+The following object is masked from ‘package:ggplot2’:
+
+    margin
+
+The following object is masked from ‘package:dplyr’:
+
+    combine
+
+> library(testthat)
+
+Attaching package: ‘testthat’
+
+The following object is masked from ‘package:psych’:
+
+    describe
+
+The following objects are masked from ‘package:magrittr’:
+
+    equals, is_less_than, not
+
+The following object is masked from ‘package:dplyr’:
+
+    matches
+
+> 
+> proc.time()
+   user  system elapsed 
+  1.560   0.558   1.939 
