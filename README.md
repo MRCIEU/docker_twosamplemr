@@ -76,6 +76,7 @@ Note this only applies to the single architecture image.
 ```bash
 docker login
 docker push mrcieu/twosamplemr:<version_no>
+docker tag mrcieu/twosamplemr:<version_no> mrcieu/twosamplemr:latest
 docker push mrcieu/twosamplemr:latest
 ```
 
@@ -83,4 +84,14 @@ Push the multiarchitecture image with
 
 ```bash
 docker push mrcieu/twosamplemr:multiarch
+```
+
+And push it as latest and the tag as well
+
+```bash
+docker tag mrcieu/twosamplemr:multiarch mrcieu/twosamplemr:<version_no>
+docker push mrcieu/twosamplemr:<version_no>
+
+docker tag mrcieu/twosamplemr:multiarch mrcieu/twosamplemr:latest
+docker push mrcieu/twosamplemr:latest
 ```
