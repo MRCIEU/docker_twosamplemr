@@ -41,7 +41,6 @@ Currently it uses Ubuntu Jammy Jellyfish 22.04.4 LTS. This tells you if you can 
 ```bash
 docker pull --platform linux/amd64 rocker/r-ver:latest
 docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr -f jammy.Dockerfile .
-docker tag mrcieu/twosamplemr mrcieu/twosamplemr:<version_no>
 ```
 
 #### Building a multi-architecture image
@@ -83,6 +82,7 @@ Note this only applies to the single architecture image.
 
 ```bash
 docker login
+docker tag mrcieu/twosamplemr mrcieu/twosamplemr:<version_no>
 docker push mrcieu/twosamplemr:<version_no>
 docker tag mrcieu/twosamplemr:<version_no> mrcieu/twosamplemr:latest
 docker push mrcieu/twosamplemr:latest
