@@ -23,12 +23,14 @@ If you are updating this and _don't_ have access to the mrcieu dockerhub organiz
 First check the current base of `rocker/r-ver:latest` with
 
 ```bash
+docker pull --platform linux/amd64 rocker/r-ver:latest
 docker run --platform linux/amd64 rocker/r-ver:latest cat /etc/lsb-release
 ```
 
 And if building the multiple architecture image check
 
 ```bash
+docker pull --platform linux/arm64 rocker/r-ver:latest
 docker run --platform linux/arm64 rocker/r-ver:latest cat /etc/lsb-release
 ```
 
