@@ -78,7 +78,7 @@ In the *test-amd64.Rout* and *test-arm64.Rout* files check that the version of T
 
 Then login to DockerHub, and push both the version numbered tag and the latest tag (this is necessary so that the mrcieu/twosamplemr image is the latest, but we also show version numbers in the tags).
 
-Note this only applies to the single architecture image.
+#### Pushing the single architecture image
 
 ```bash
 docker login
@@ -88,7 +88,7 @@ docker tag mrcieu/twosamplemr:<version_no> mrcieu/twosamplemr:latest
 docker push mrcieu/twosamplemr:latest
 ```
 
-Push the multiarchitecture image with
+#### Pushing the multiarchitecture image
 
 ```bash
 docker push mrcieu/twosamplemr:multiarch
