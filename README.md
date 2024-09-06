@@ -8,10 +8,10 @@ This is the Dockerfile for the [TwoSampleMR dockerhub image](https://hub.docker.
 docker run -it mrcieu/twosamplemr R
 ```
 
-or run a specific tag with, e.g., 0.6.7
+or run a specific tag with, e.g., 0.6.8
 
 ```bash
-docker run -it mrcieu/twosamplemr:0.6.7 R
+docker run -it mrcieu/twosamplemr:0.6.8 R
 ```
 
 ## Developers
