@@ -30,8 +30,7 @@ docker run --platform linux/amd64 rocker/r-ver:latest cat /etc/lsb-release
 And if building the multiple architecture image check
 
 ```bash
-docker pull --platform linux/arm64 rocker/r-ver:latest
-docker run --platform linux/arm64 rocker/r-ver:latest cat /etc/lsb-release
+just check-base
 ```
 
 Currently it uses Ubuntu Noble Numbat 24.04.1 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of Noble Numbat during which these versions do not match.
@@ -50,7 +49,7 @@ For the multi-architecture image you must enable the containerd image store in D
 Build the image (untagged/latest) and then add a version number tag as follows.
 
 ```bash
-docker buildx build --pull --platform linux/arm64,linux/amd64 --no-cache --tag mrcieu/twosamplemr:multiarch .
+just build
 ```
 
 ### Run the test script
@@ -68,8 +67,7 @@ In the *test.Rout* file check that the version of TwoSampleMR is the latest one 
 #### Running the test script for the multiarch image
 
 ```bash
-docker run --platform linux/amd64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:multiarch /bin/bash -c "R CMD BATCH test.R test-amd64.Rout"
-docker run --platform linux/arm64 -v /$PWD:/usr/local/src/myscripts mrcieu/twosamplemr:multiarch /bin/bash -c "R CMD BATCH test.R test-arm64.Rout"
+just test
 ```
 
 In the *test-amd64.Rout* and *test-arm64.Rout* files check that the version of TwoSampleMR is the latest one you expect.
@@ -91,15 +89,5 @@ docker push mrcieu/twosamplemr:latest
 #### Pushing the multiarchitecture image
 
 ```bash
-docker push mrcieu/twosamplemr:multiarch
-```
-
-And push it as latest and the tag as well
-
-```bash
-docker tag mrcieu/twosamplemr:multiarch mrcieu/twosamplemr:<version_no>
-docker push mrcieu/twosamplemr:<version_no>
-
-docker tag mrcieu/twosamplemr:multiarch mrcieu/twosamplemr:latest
-docker push mrcieu/twosamplemr:latest
+just publish VERSION
 ```
