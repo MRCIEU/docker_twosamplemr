@@ -1,5 +1,5 @@
 
-R version 4.4.1 (2024-06-14) -- "Race for Your Life"
+R version 4.4.2 (2024-10-31) -- "Pile of Leaves"
 Copyright (C) 2024 The R Foundation for Statistical Computing
 Platform: x86_64-pc-linux-gnu
 
@@ -22,7 +22,7 @@ Type 'q()' to quit R.
 > # Test script
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.8 
+TwoSampleMR version 0.6.9 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -31,7 +31,7 @@ TwoSampleMR version 0.6.8
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.8’
+[1] ‘0.6.9’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -106,10 +106,8 @@ The following objects are masked from ‘package:TwoSampleMR’:
 
 > library(meta)
 Loading required package: metadat
-Loading 'meta' package (version 7.0-0).
+Loading 'meta' package (version 8.0-2).
 Type 'help(meta)' for a brief overview.
-Readers of 'Meta-Analysis with R (Use R!)' should install
-older version of 'meta' package: https://tinyurl.com/dt4y5drs
 > library(mr.raps)
 > library(MRMix)
 > library(MRPRESSO)
@@ -151,7 +149,7 @@ The following object is masked from ‘package:dplyr’:
 > library(markdown)
 > library(MRInstruments)
 > library(randomForest)
-randomForest 4.7-1.1
+randomForest 4.7-1.2
 Type rfNews() to see new features/changes/bug fixes.
 
 Attaching package: ‘randomForest’
@@ -191,4 +189,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  2.966   2.079   3.452 
+  2.995   2.110   3.023 
