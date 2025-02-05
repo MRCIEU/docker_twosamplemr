@@ -34,13 +34,13 @@ docker pull --platform linux/arm64 rocker/r-ver:latest
 docker run --platform linux/arm64 rocker/r-ver:latest cat /etc/lsb-release
 ```
 
-Currently it uses Ubuntu Jammy Jellyfish 22.04.4 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of Noble Numbat during which these versions do not match.
+Currently it uses Ubuntu Noble Numbat 24.04.1 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of Noble Numbat during which these versions do not match.
 
 #### Building a solely amd64 architecture image
 
 ```bash
 docker pull --platform linux/amd64 rocker/r-ver:latest
-docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr -f jammy.Dockerfile .
+docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr .
 ```
 
 #### Building a multi-architecture image
