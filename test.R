@@ -1,4 +1,8 @@
 # Test script
+
+# List all installed packages
+installed.packages()[, c("Package", "Version")]
+
 # Loads TwoSampleMR and all its dependency packages
 library(TwoSampleMR)
 
