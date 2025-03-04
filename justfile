@@ -7,7 +7,6 @@ test:
 
 publish version:
     docker push mrcieu/twosamplemr:multiarch
-    docker push mrcieu/twosamplemr:multiarch
     docker tag mrcieu/twosamplemr:multiarch mrcieu/twosamplemr:{{ version }}
     docker push mrcieu/twosamplemr:{{ version }}
     docker tag mrcieu/twosamplemr:multiarch mrcieu/twosamplemr:latest
