@@ -29,7 +29,7 @@ arrangements           "arrangements"           "1.1.9"
 askpass                "askpass"                "1.2.1"     
 backports              "backports"              "1.5.0"     
 base64enc              "base64enc"              "0.1-3"     
-bit                    "bit"                    "4.5.0.1"   
+bit                    "bit"                    "4.6.0"     
 bit64                  "bit64"                  "4.6.0-1"   
 brio                   "brio"                   "1.1.5"     
 broom                  "broom"                  "1.0.7"     
@@ -168,7 +168,7 @@ tidyr                  "tidyr"                  "1.3.1"
 tidyselect             "tidyselect"             "1.2.1"     
 tinytex                "tinytex"                "0.56"      
 triebeard              "triebeard"              "0.4.1"     
-TwoSampleMR            "TwoSampleMR"            "0.6.10"    
+TwoSampleMR            "TwoSampleMR"            "0.6.11"    
 tzdb                   "tzdb"                   "0.4.0"     
 urltools               "urltools"               "1.7.3"     
 utf8                   "utf8"                   "1.2.4"     
@@ -212,7 +212,7 @@ utils                  "utils"                  "4.4.3"
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.10 
+TwoSampleMR version 0.6.11 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -221,7 +221,7 @@ TwoSampleMR version 0.6.10
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.10’
+[1] ‘0.6.11’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -379,4 +379,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  3.213   2.286   3.182 
+  3.335   1.774   3.707 
