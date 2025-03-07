@@ -32,4 +32,7 @@ RUN R -e 'options( \
           R.version["platform"], \
           R.version["arch"], \
           R.version["os"]))); \
-    install.packages("TwoSampleMR", dependencies = TRUE)'
+    install.packages("TwoSampleMR", dependencies = TRUE); \
+    # mr.raps Suggests; \
+    install.packages(c("rsnps", "BiocManager")); \
+    BiocManager::install(c("bumphunter", "TxDb.Hsapiens.UCSC.hg38.knownGene"))'
