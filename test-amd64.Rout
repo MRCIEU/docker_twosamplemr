@@ -226,15 +226,9 @@ TwoSampleMR version 0.6.11
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
 > library(data.table)
-> library(plyr)
 > library(dplyr)
 
 Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:plyr’:
-
-    arrange, count, desc, failwith, id, mutate, rename, summarise,
-    summarize
 
 The following objects are masked from ‘package:data.table’:
 
@@ -275,6 +269,7 @@ The following object is masked from ‘package:TwoSampleMR’:
 
     ld_matrix
 
+> library(jsonlite)
 > library(knitr)
 > library(lattice)
 > library(magrittr)
@@ -286,22 +281,27 @@ The following object is masked from ‘package:dplyr’:
 
     select
 
-> library(MendelianRandomization)
-
-Attaching package: ‘MendelianRandomization’
-
-The following objects are masked from ‘package:TwoSampleMR’:
-
-    mr_ivw, mr_median
-
 > library(meta)
 Loading required package: metadat
 Loading 'meta' package (version 8.0-2).
 Type 'help(meta)' for a brief overview.
-> library(mr.raps)
 > library(MRMix)
 > library(MRPRESSO)
 > library(pbapply)
+> library(plyr)
+------------------------------------------------------------------------------
+You have loaded plyr after dplyr - this is likely to cause problems.
+If you need functions from both plyr and dplyr, please load plyr first, then dplyr:
+library(plyr); library(dplyr)
+------------------------------------------------------------------------------
+
+Attaching package: ‘plyr’
+
+The following objects are masked from ‘package:dplyr’:
+
+    arrange, count, desc, failwith, id, mutate, rename, summarise,
+    summarize
+
 > library(psych)
 
 Attaching package: ‘psych’
@@ -337,6 +337,15 @@ The following object is masked from ‘package:dplyr’:
     recode
 
 > library(markdown)
+> library(MendelianRandomization)
+
+Attaching package: ‘MendelianRandomization’
+
+The following objects are masked from ‘package:TwoSampleMR’:
+
+    mr_ivw, mr_median
+
+> library(mr.raps)
 > library(MRInstruments)
 > library(randomForest)
 randomForest 4.7-1.2
@@ -376,7 +385,27 @@ The following object is masked from ‘package:dplyr’:
 
     matches
 
+> library(tidyr)
+
+Attaching package: ‘tidyr’
+
+The following object is masked from ‘package:testthat’:
+
+    matches
+
+The following object is masked from ‘package:reshape2’:
+
+    smiths
+
+The following object is masked from ‘package:magrittr’:
+
+    extract
+
+The following objects are masked from ‘package:Matrix’:
+
+    expand, pack, unpack
+
 > 
 > proc.time()
    user  system elapsed 
-  3.335   1.774   3.707 
+  3.068   1.504   3.351 
