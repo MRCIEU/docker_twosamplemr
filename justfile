@@ -17,3 +17,9 @@ check:
     docker run --platform linux/amd64 rocker/r-ver:latest cat /etc/lsb-release
     docker pull --platform linux/arm64 rocker/r-ver:latest
     docker run --platform linux/arm64 rocker/r-ver:latest cat /etc/lsb-release
+
+all version:
+    {{ just_executable() }} check
+    {{ just_executable() }} build
+    {{ just_executable() }} test
+    {{ just_executable() }} publish {{ version }}
