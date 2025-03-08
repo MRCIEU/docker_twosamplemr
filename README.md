@@ -30,7 +30,7 @@ docker run --platform linux/amd64 rocker/r-ver:latest cat /etc/lsb-release
 And if building the multiple architecture image check
 
 ```bash
-just check-base
+just check
 ```
 
 Currently it uses Ubuntu Noble Numbat 24.04.1 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of Noble Numbat during which these versions do not match.

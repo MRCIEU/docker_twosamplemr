@@ -12,7 +12,7 @@ publish version:
     docker tag mrcieu/twosamplemr:multiarch mrcieu/twosamplemr:latest
     docker push mrcieu/twosamplemr:latest
 
-check-base:
+check:
     docker pull --platform linux/amd64 rocker/r-ver:latest
     docker run --platform linux/amd64 rocker/r-ver:latest cat /etc/lsb-release
     docker pull --platform linux/arm64 rocker/r-ver:latest
