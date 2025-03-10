@@ -42,3 +42,9 @@ library(MRInstruments)
 library(randomForest)
 library(testthat)
 library(tidyr)
+
+# mr.raps Imports
+library(rsnps)
+# mr.raps Suggests
+library(bumphunter)
+library(TxDb.Hsapiens.UCSC.hg38.knownGene)
