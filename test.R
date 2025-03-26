@@ -1,5 +1,8 @@
 # Test script
 
+# Record date and time this was run
+Sys.time()
+
 # List all installed packages
 installed.packages()[, c("Package", "Version")]
 
