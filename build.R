@@ -7,6 +7,7 @@ options(
 
 if (R.version["arch"] != "aarch64") {
   options(
+    repos = c(universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/"),
     HTTPUserAgent = sprintf(
       'R/%s R (%s)',
       getRversion(),
@@ -32,11 +33,7 @@ install.packages(
 )
 
 # install TwoSampleMR and hard and soft deps
-pak::repo_get()
-stop("stop")
 pak::pkg_install("TwoSampleMR", dependencies = TRUE)
-
-
 
 # mr.raps suggests packages from BioConductor
 pak::pkg_install(c("bumphunter", "TxDb.Hsapiens.UCSC.hg38.knownGene"))
