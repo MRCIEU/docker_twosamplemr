@@ -43,3 +43,5 @@ pak::pkg_install("TwoSampleMR", dependencies = TRUE)
 
 # mr.raps suggests packages from BioConductor
 pak::pkg_install(c("bumphunter", "TxDb.Hsapiens.UCSC.hg38.knownGene"))
+
+remove.packages("pak")
