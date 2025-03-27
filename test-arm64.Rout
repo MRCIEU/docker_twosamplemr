@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2025-03-26 15:06:53 UTC"
+[1] "2025-03-27 09:14:07 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -38,9 +38,7 @@ BH                                "BH"
 Biobase                           "Biobase"                          
 BiocGenerics                      "BiocGenerics"                     
 BiocIO                            "BiocIO"                           
-BiocManager                       "BiocManager"                      
 BiocParallel                      "BiocParallel"                     
-BiocVersion                       "BiocVersion"                      
 Biostrings                        "Biostrings"                       
 bit                               "bit"                              
 bit64                             "bit64"                            
@@ -275,9 +273,7 @@ BH                                "1.87.0-1"
 Biobase                           "2.66.0"    
 BiocGenerics                      "0.52.0"    
 BiocIO                            "1.16.0"    
-BiocManager                       "1.30.25"   
 BiocParallel                      "1.40.0"    
-BiocVersion                       "3.20.0"    
 Biostrings                        "2.74.1"    
 bit                               "4.6.0"     
 bit64                             "4.6.0-1"   
@@ -302,7 +298,7 @@ cpp11                             "0.5.2"
 crayon                            "1.5.3"     
 crosstalk                         "1.2.1"     
 crul                              "1.5.0"     
-curl                              "6.2.2"     
+curl                              "6.2.1"     
 data.table                        "1.17.0"    
 DBI                               "1.2.3"     
 DelayedArray                      "0.32.0"    
@@ -363,13 +359,13 @@ lifecycle                         "1.0.4"
 limma                             "3.62.2"    
 litedown                          "0.6"       
 littler                           "0.3.20"    
-lme4                              "1.1-37"    
+lme4                              "1.1-36"    
 locfit                            "1.5-9.12"  
 magrittr                          "2.0.3"     
 markdown                          "2.0"       
 mathjaxr                          "1.6-0"     
 MatrixGenerics                    "1.18.1"    
-MatrixModels                      "0.5-4"     
+MatrixModels                      "0.5-3"     
 matrixStats                       "1.5.0"     
 memoise                           "2.0.1"     
 MendelianRandomization            "0.10.0"    
@@ -393,7 +389,7 @@ openssl                           "2.3.2"
 pbapply                           "1.7-2"     
 pbkrtest                          "0.5.3"     
 pillar                            "1.10.1"    
-pkgbuild                          "1.4.7"     
+pkgbuild                          "1.4.6"     
 pkgconfig                         "2.0.3"     
 pkgload                           "1.4.0"     
 plogr                             "0.2.0"     
@@ -830,4 +826,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  5.307   1.219   6.377 
+  5.384   1.713   6.984 
