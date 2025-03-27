@@ -3,10 +3,10 @@
 # check=error=true
 FROM rocker/r-ver:4.4.3
 WORKDIR /usr/local/src/myscripts
-RUN apt-get update && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -yyy \
         build-essential \
-        libcurl4-gnutls-dev \
+        libcurl4-openssl-dev \
         libxml2-dev \
         libssl-dev \
         libgmp3-dev \
