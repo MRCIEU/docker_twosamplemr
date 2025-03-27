@@ -16,8 +16,9 @@ if (R.version["arch"] != "aarch64") {
     repos = c(
       universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/",
       CRAN = "https://p3m.dev/cran/__linux__/noble/2025-03-24",
-      BioC_mirror = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-03-21"
+      BioCsoft = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-03-21"
     ),
+    BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/2025-03-21/config.yaml",
     HTTPUserAgent = sprintf(
       'R/%s R (%s)',
       getRversion(),
