@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.11
 # enable docker linting
 # check=error=true
-FROM rocker/r-ver:latest
+FROM rocker/r-ver:4.4.3
 WORKDIR /usr/local/src/myscripts
 RUN apt-get update && \
     apt-get install -yyy \
