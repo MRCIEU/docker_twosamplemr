@@ -1,3 +1,6 @@
+# syntax=docker/dockerfile:1.11
+# enable docker linting
+# check=error=true
 FROM rocker/r-ver:latest
 WORKDIR /usr/local/src/myscripts
 RUN apt-get update && \
@@ -21,18 +24,5 @@ RUN apt-get update && \
 # Public Posit Package Manager (otherwise source packages which will have to 
 # be built will be obtained).
 
-RUN R -e 'options( \
-    repos = c(universe = "https://mrcieu.r-universe.dev/", \
-        binaries = "https://p3m.dev/cran/__linux__/noble/2025-03-24", \
-        CRAN = "https://cloud.r-project.org"), \
-    HTTPUserAgent = sprintf( \
-        "R/%s R (%s)", \
-        getRversion(), \
-        paste(getRversion(), \
-          R.version["platform"], \
-          R.version["arch"], \
-          R.version["os"]))); \
-    install.packages("TwoSampleMR", dependencies = TRUE); \
-    # mr.raps Suggests; \
-    install.packages("BiocManager"); \
-    BiocManager::install(c("bumphunter", "TxDb.Hsapiens.UCSC.hg38.knownGene"))'
+RUN --mount=type=bind,source=build.R,target=/tmp/build.R \
+    Rscript /tmp/build.R
