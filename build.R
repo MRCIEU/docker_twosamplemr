@@ -1,14 +1,19 @@
+# source package repos for aarch64
 options(
   repos = c(
     universe = "https://mrcieu.r-universe.dev/",
-    CRAN = "https://p3m.dev/cran/__linux__/noble/2025-03-24"
+    CRAN = "https://p3m.dev/cran/2025-03-24"
   ),
   pkg.sysreqs_db_update_timeout = as.difftime(59, units = "secs")
 )
 
 if (R.version["arch"] != "aarch64") {
+  # Linux binary package repos for x86_64
   options(
-    repos = c(universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/"),
+    repos = c(
+      universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/",
+      CRAN = "https://p3m.dev/cran/__linux__/noble/2025-03-24"
+    ),
     HTTPUserAgent = sprintf(
       'R/%s R (%s)',
       getRversion(),
