@@ -10,7 +10,7 @@ options(
 # Set the Bioconductor version to prevent defaulting to a newer version:
 Sys.setenv("R_BIOC_VERSION" = "3.20")
 
-if (R.version["arch"] != "aarch64") {
+if (R.Version()$arch == "x86_64") {
   # Linux binary package repos for x86_64
   options(
     repos = c(
