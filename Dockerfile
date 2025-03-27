@@ -15,7 +15,8 @@ RUN apt-get update && \
         libxt-dev \
         libharfbuzz-dev \
         libtiff-dev \
-        libstdc++6
+        libstdc++6 \
+        pandoc
 
 # Wait until MRCIEU R-Universe has built latest version of the TwoSampleMR binary
 # Should be 1 hour or maybe overnight
