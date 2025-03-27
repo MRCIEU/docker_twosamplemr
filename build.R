@@ -7,12 +7,16 @@ options(
   pkg.sysreqs_db_update_timeout = as.difftime(59, units = "secs")
 )
 
+# Set the Bioconductor version to prevent defaulting to a newer version:
+Sys.setenv("R_BIOC_VERSION" = "3.20")
+
 if (R.version["arch"] != "aarch64") {
   # Linux binary package repos for x86_64
   options(
     repos = c(
       universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/",
-      CRAN = "https://p3m.dev/cran/__linux__/noble/2025-03-24"
+      CRAN = "https://p3m.dev/cran/__linux__/noble/2025-03-24",
+      BioC_mirror = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-03-21"
     ),
     HTTPUserAgent = sprintf(
       'R/%s R (%s)',
