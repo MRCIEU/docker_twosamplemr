@@ -2,7 +2,7 @@
 options(
   repos = c(
     universe = "https://mrcieu.r-universe.dev/",
-    CRAN = "https://p3m.dev/cran/2025-03-24"
+    CRAN = "https://p3m.dev/cran/2025-03-27"
   ),
   pkg.sysreqs_db_update_timeout = as.difftime(59, units = "secs")
 )
@@ -15,10 +15,10 @@ if (R.Version()$arch == "x86_64") {
   options(
     repos = c(
       universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/",
-      CRAN = "https://p3m.dev/cran/__linux__/noble/2025-03-24",
-      BioCsoft = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-03-21"
+      CRAN = "https://p3m.dev/cran/__linux__/noble/2025-03-27",
+      BioCsoft = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-03-27"
     ),
-    BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/2025-03-21/config.yaml",
+    BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/2025-03-27/config.yaml",
     HTTPUserAgent = sprintf(
       'R/%s R (%s)',
       getRversion(),
