@@ -2,23 +2,23 @@
 options(
   repos = c(
     universe = "https://mrcieu.r-universe.dev/",
-    CRAN = "https://p3m.dev/cran/2025-03-27"
+    CRAN = "https://p3m.dev/cran/2025-04-30"
   ),
   pkg.sysreqs_db_update_timeout = as.difftime(59, units = "secs")
 )
 
 # Set the Bioconductor version to prevent defaulting to a newer version:
-Sys.setenv("R_BIOC_VERSION" = "3.20")
+Sys.setenv("R_BIOC_VERSION" = "3.21")
 
 if (R.Version()$arch == "x86_64") {
   # Linux binary package repos for x86_64
   options(
     repos = c(
-      universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.4/",
-      CRAN = "https://p3m.dev/cran/__linux__/noble/2025-03-27",
-      BioCsoft = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-03-27"
+      universe = "https://mrcieu.r-universe.dev/bin/linux/noble/4.5/",
+      CRAN = "https://p3m.dev/cran/__linux__/noble/2025-04-30",
+      BioCsoft = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-04-29"
     ),
-    BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/2025-03-27/config.yaml",
+    BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/2025-04-29/config.yaml",
     HTTPUserAgent = sprintf(
       'R/%s R (%s)',
       getRversion(),
