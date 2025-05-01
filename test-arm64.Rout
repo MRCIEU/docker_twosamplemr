@@ -1,5 +1,5 @@
 
-R version 4.4.3 (2025-02-28) -- "Trophy Case"
+R version 4.5.0 (2025-04-11) -- "How About a Twenty-Six"
 Copyright (C) 2025 The R Foundation for Statistical Computing
 Platform: aarch64-unknown-linux-gnu
 
@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2025-03-28 10:59:21 UTC"
+[1] "2025-05-01 10:01:55 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -55,7 +55,6 @@ car                               "car"
 carData                           "carData"                          
 cli                               "cli"                              
 clipr                             "clipr"                            
-colorspace                        "colorspace"                       
 commonmark                        "commonmark"                       
 CompQuadForm                      "CompQuadForm"                     
 cowplot                           "cowplot"                          
@@ -146,7 +145,6 @@ mr.raps                           "mr.raps"
 MRInstruments                     "MRInstruments"                    
 MRMix                             "MRMix"                            
 MRPRESSO                          "MRPRESSO"                         
-munsell                           "munsell"                          
 nloptr                            "nloptr"                           
 nortest                           "nortest"                          
 numDeriv                          "numDeriv"                         
@@ -232,7 +230,6 @@ XML                               "XML"
 xml2                              "xml2"                             
 XVector                           "XVector"                          
 yaml                              "yaml"                             
-zlibbioc                          "zlibbioc"                         
 base                              "base"                             
 boot                              "boot"                             
 class                             "class"                            
@@ -264,33 +261,32 @@ tools                             "tools"
 utils                             "utils"                            
                                   Version     
 abind                             "1.4-8"     
-AnnotationDbi                     "1.68.0"    
+AnnotationDbi                     "1.70.0"    
 arrangements                      "1.1.9"     
 askpass                           "1.2.1"     
 backports                         "1.5.0"     
 base64enc                         "0.1-3"     
 BH                                "1.87.0-1"  
-Biobase                           "2.66.0"    
-BiocGenerics                      "0.52.0"    
-BiocIO                            "1.16.0"    
-BiocParallel                      "1.40.0"    
-Biostrings                        "2.74.1"    
+Biobase                           "2.68.0"    
+BiocGenerics                      "0.54.0"    
+BiocIO                            "1.18.0"    
+BiocParallel                      "1.42.0"    
+Biostrings                        "2.76.0"    
 bit                               "4.6.0"     
 bit64                             "4.6.0-1"   
 bitops                            "1.0-9"     
 blob                              "1.2.4"     
 brio                              "1.1.5"     
-broom                             "1.0.7"     
+broom                             "1.0.8"     
 bslib                             "0.9.0"     
-bumphunter                        "1.48.0"    
+bumphunter                        "1.50.0"    
 cachem                            "1.1.0"     
 Cairo                             "1.6-2"     
 callr                             "3.7.6"     
 car                               "3.1-3"     
 carData                           "3.0-5"     
-cli                               "3.6.4"     
+cli                               "3.6.5"     
 clipr                             "0.8.0"     
-colorspace                        "2.1-1"     
 commonmark                        "1.9.5"     
 CompQuadForm                      "1.4.3"     
 cowplot                           "1.1.3"     
@@ -301,15 +297,15 @@ crul                              "1.5.0"
 curl                              "6.2.2"     
 data.table                        "1.17.0"    
 DBI                               "1.2.3"     
-DelayedArray                      "0.32.0"    
+DelayedArray                      "0.34.1"    
 DEoptimR                          "1.1-3-1"   
 Deriv                             "4.1.6"     
 desc                              "1.4.3"     
-diffobj                           "0.3.5"     
+diffobj                           "0.3.6"     
 digest                            "0.6.37"    
-doBy                              "4.6.25"    
-docopt                            "0.7.1"     
-doRNG                             "1.8.6.1"   
+doBy                              "4.6.26"    
+docopt                            "0.7.2"     
+doRNG                             "1.8.6.2"   
 dplyr                             "1.1.4"     
 evaluate                          "1.0.3"     
 fansi                             "1.0.6"     
@@ -319,21 +315,21 @@ fontawesome                       "0.5.3"
 foreach                           "1.5.2"     
 formatR                           "1.14"      
 Formula                           "1.2-5"     
-fs                                "1.6.5"     
+fs                                "1.6.6"     
 futile.logger                     "1.4.3"     
 futile.options                    "1.0.1"     
 generics                          "0.1.3"     
-GenomeInfoDb                      "1.42.3"    
-GenomeInfoDbData                  "1.2.13"    
-GenomicAlignments                 "1.42.0"    
-GenomicFeatures                   "1.58.0"    
-GenomicRanges                     "1.58.0"    
-ggplot2                           "3.5.1"     
+GenomeInfoDb                      "1.44.0"    
+GenomeInfoDbData                  "1.2.14"    
+GenomicAlignments                 "1.44.0"    
+GenomicFeatures                   "1.60.0"    
+GenomicRanges                     "1.60.0"    
+ggplot2                           "3.5.2"     
 ggrepel                           "0.9.6"     
 glmnet                            "4.1-8"     
 glue                              "1.8.0"     
 gmp                               "0.7-5"     
-GPArotation                       "2024.3-1"  
+GPArotation                       "2025.3-1"  
 gridExtra                         "2.3"       
 gtable                            "0.3.6"     
 highr                             "0.11"      
@@ -342,29 +338,29 @@ htmltools                         "0.5.8.1"
 htmlwidgets                       "1.6.4"     
 httpcode                          "0.3.0"     
 httr                              "1.4.7"     
-ieugwasr                          "1.0.3"     
-IRanges                           "2.40.1"    
+ieugwasr                          "1.0.4"     
+IRanges                           "2.42.0"    
 isoband                           "0.2.7"     
 iterators                         "1.0.14"    
 iterpc                            "0.4.2"     
 jquerylib                         "0.1.4"     
-jsonlite                          "1.9.1"     
-KEGGREST                          "1.46.0"    
+jsonlite                          "2.0.0"     
+KEGGREST                          "1.48.0"    
 knitr                             "1.50"      
 labeling                          "0.4.3"     
 lambda.r                          "1.2.4"     
-later                             "1.4.1"     
+later                             "1.4.2"     
 lazyeval                          "0.2.2"     
 lifecycle                         "1.0.4"     
-limma                             "3.62.2"    
-litedown                          "0.6"       
-littler                           "0.3.20"    
+limma                             "3.64.0"    
+litedown                          "0.7"       
+littler                           "0.3.21"    
 lme4                              "1.1-37"    
 locfit                            "1.5-9.12"  
 magrittr                          "2.0.3"     
 markdown                          "2.0"       
 mathjaxr                          "1.6-0"     
-MatrixGenerics                    "1.18.1"    
+MatrixGenerics                    "1.20.0"    
 MatrixModels                      "0.5-4"     
 matrixStats                       "1.5.0"     
 memoise                           "2.0.1"     
@@ -381,14 +377,13 @@ mr.raps                           "0.4.2"
 MRInstruments                     "0.3.2"     
 MRMix                             "0.1.0"     
 MRPRESSO                          "1.0"       
-munsell                           "0.5.1"     
 nloptr                            "2.2.1"     
 nortest                           "1.0-4"     
 numDeriv                          "2016.8-1.1"
 openssl                           "2.3.2"     
 pbapply                           "1.7-2"     
-pbkrtest                          "0.5.3"     
-pillar                            "1.10.1"    
+pbkrtest                          "0.5.4"     
+pillar                            "1.10.2"    
 pkgbuild                          "1.4.7"     
 pkgconfig                         "2.0.3"     
 pkgload                           "1.4.0"     
@@ -401,60 +396,60 @@ prettyunits                       "1.2.0"
 processx                          "3.8.6"     
 progress                          "1.2.3"     
 promises                          "1.3.2"     
-ps                                "1.9.0"     
+ps                                "1.9.1"     
 psych                             "2.5.3"     
 purrr                             "1.0.4"     
 quantreg                          "6.1"       
 R6                                "2.6.1"     
-RadialMR                          "1.1"       
+RadialMR                          "1.2"       
 randomForest                      "4.7-1.2"   
 rappdirs                          "0.3.3"     
 rbibutils                         "2.3"       
 RColorBrewer                      "1.1-3"     
 Rcpp                              "1.0.14"    
-RcppArmadillo                     "14.4.0-1"  
+RcppArmadillo                     "14.4.2-1"  
 RcppEigen                         "0.3.4.0.2" 
 RCurl                             "1.98-1.17" 
-Rdpack                            "2.6.3"     
+Rdpack                            "2.6.4"     
 readr                             "2.1.5"     
 reformulas                        "0.4.0"     
 reshape2                          "1.4.4"     
 restfulr                          "0.0.15"    
-Rhtslib                           "3.2.0"     
+Rhtslib                           "3.4.0"     
 rjson                             "0.2.23"    
-rlang                             "1.1.5"     
+rlang                             "1.1.6"     
 rmarkdown                         "2.29"      
 rngtools                          "1.5.2"     
 robustbase                        "0.99-4-1"  
 rootSolve                         "1.8.2.4"   
 rprojroot                         "2.0.4"     
-Rsamtools                         "2.22.0"    
+Rsamtools                         "2.24.0"    
 rsnps                             "0.6.1"     
 RSQLite                           "2.3.9"     
-rtracklayer                       "1.66.0"    
-S4Arrays                          "1.6.0"     
-S4Vectors                         "0.44.0"    
-sass                              "0.4.9"     
-scales                            "1.3.0"     
+rtracklayer                       "1.68.0"    
+S4Arrays                          "1.8.0"     
+S4Vectors                         "0.46.0"    
+sass                              "0.4.10"    
+scales                            "1.4.0"     
 shape                             "1.4.6.1"   
 snow                              "0.4-4"     
-SparseArray                       "1.6.2"     
+SparseArray                       "1.8.0"     
 SparseM                           "1.84-2"    
 statmod                           "1.5.0"     
-stringi                           "1.8.4"     
+stringi                           "1.8.7"     
 stringr                           "1.5.1"     
-SummarizedExperiment              "1.36.0"    
+SummarizedExperiment              "1.38.0"    
 sys                               "3.4.3"     
 testthat                          "3.2.3"     
 tibble                            "3.2.1"     
 tidyr                             "1.3.1"     
 tidyselect                        "1.2.1"     
-tinytex                           "0.56"      
+tinytex                           "0.57"      
 triebeard                         "0.4.1"     
-TwoSampleMR                       "0.6.14"    
-TxDb.Hsapiens.UCSC.hg38.knownGene "3.20.0"    
+TwoSampleMR                       "0.6.15"    
+TxDb.Hsapiens.UCSC.hg38.knownGene "3.21.0"    
 tzdb                              "0.5.0"     
-UCSC.utils                        "1.2.0"     
+UCSC.utils                        "1.4.0"     
 urltools                          "1.7.3"     
 utf8                              "1.2.4"     
 vctrs                             "0.6.5"     
@@ -462,45 +457,44 @@ viridisLite                       "0.4.2"
 vroom                             "1.6.5"     
 waldo                             "0.6.1"     
 withr                             "3.0.2"     
-xfun                              "0.51"      
+xfun                              "0.52"      
 XML                               "3.99-0.18" 
 xml2                              "1.3.8"     
-XVector                           "0.46.0"    
+XVector                           "0.48.0"    
 yaml                              "2.3.10"    
-zlibbioc                          "1.52.0"    
-base                              "4.4.3"     
+base                              "4.5.0"     
 boot                              "1.3-31"    
 class                             "7.3-23"    
-cluster                           "2.1.8"     
+cluster                           "2.1.8.1"   
 codetools                         "0.2-20"    
-compiler                          "4.4.3"     
-datasets                          "4.4.3"     
-foreign                           "0.8-88"    
-graphics                          "4.4.3"     
-grDevices                         "4.4.3"     
-grid                              "4.4.3"     
+compiler                          "4.5.0"     
+datasets                          "4.5.0"     
+foreign                           "0.8-90"    
+graphics                          "4.5.0"     
+grDevices                         "4.5.0"     
+grid                              "4.5.0"     
 KernSmooth                        "2.23-26"   
 lattice                           "0.22-6"    
-MASS                              "7.3-64"    
-Matrix                            "1.7-2"     
-methods                           "4.4.3"     
+MASS                              "7.3-65"    
+Matrix                            "1.7-3"     
+methods                           "4.5.0"     
 mgcv                              "1.9-1"     
-nlme                              "3.1-167"   
+nlme                              "3.1-168"   
 nnet                              "7.3-20"    
-parallel                          "4.4.3"     
+parallel                          "4.5.0"     
 rpart                             "4.1.24"    
 spatial                           "7.3-18"    
-splines                           "4.4.3"     
-stats                             "4.4.3"     
-stats4                            "4.4.3"     
+splines                           "4.5.0"     
+stats                             "4.5.0"     
+stats4                            "4.5.0"     
 survival                          "3.8-3"     
-tcltk                             "4.4.3"     
-tools                             "4.4.3"     
-utils                             "4.4.3"     
+tcltk                             "4.5.0"     
+tools                             "4.5.0"     
+utils                             "4.5.0"     
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.14 
+TwoSampleMR version 0.6.15 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -509,7 +503,7 @@ TwoSampleMR version 0.6.14
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.14’
+[1] ‘0.6.15’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -701,6 +695,19 @@ The following objects are masked from ‘package:Matrix’:
 Loading required package: S4Vectors
 Loading required package: stats4
 Loading required package: BiocGenerics
+Loading required package: generics
+
+Attaching package: ‘generics’
+
+The following object is masked from ‘package:dplyr’:
+
+    explain
+
+The following objects are masked from ‘package:base’:
+
+    as.difftime, as.factor, as.ordered, intersect, is.element, setdiff,
+    setequal, union
+
 
 Attaching package: ‘BiocGenerics’
 
@@ -712,9 +719,9 @@ The following object is masked from ‘package:gridExtra’:
 
     combine
 
-The following objects are masked from ‘package:dplyr’:
+The following object is masked from ‘package:dplyr’:
 
-    combine, intersect, setdiff, union
+    combine
 
 The following objects are masked from ‘package:stats’:
 
@@ -724,10 +731,10 @@ The following objects are masked from ‘package:base’:
 
     anyDuplicated, aperm, append, as.data.frame, basename, cbind,
     colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
-    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
-    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
-    Position, rank, rbind, Reduce, rownames, sapply, saveRDS, setdiff,
-    table, tapply, union, unique, unsplit, which.max, which.min
+    get, grep, grepl, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, saveRDS, table, tapply, unique,
+    unsplit, which.max, which.min
 
 
 Attaching package: ‘S4Vectors’
@@ -826,4 +833,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  5.333   1.692   6.807 
+  4.535   0.708   5.061 
