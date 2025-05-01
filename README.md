@@ -8,10 +8,10 @@ This is the Dockerfile for the [TwoSampleMR dockerhub image](https://hub.docker.
 docker run -it mrcieu/twosamplemr R
 ```
 
-or run a specific tag with, e.g., 0.6.8
+or run a specific tag with, e.g., 0.6.15
 
 ```bash
-docker run -it mrcieu/twosamplemr:0.6.8 R
+docker run -it mrcieu/twosamplemr:0.6.15 R
 ```
 
 ## Developers
@@ -20,11 +20,16 @@ If you are updating this and _don't_ have access to the mrcieu dockerhub organiz
 
 ### Build the image
 
-First check the current base of `rocker/r-ver:latest` with
+First go through the _Dockerfile_ and _build.R_ to check whether the versions of R, Bioconductor, and the Posit Public Package Manager CRAN and Bioconductor snapshot date URLs are up to date - you can check those dates at
+
+* <https://packagemanager.posit.co/client/#/repos/cran/setup>
+* <https://packagemanager.posit.co/client/#/repos/bioconductor/setup>
+
+Then check the current base of `rocker/r-ver:4.5.0` with
 
 ```bash
-docker pull --platform linux/amd64 rocker/r-ver:latest
-docker run --platform linux/amd64 rocker/r-ver:latest cat /etc/lsb-release
+docker pull --platform linux/amd64 rocker/r-ver:4.5.0
+docker run --platform linux/amd64 rocker/r-ver:4.5.0 cat /etc/lsb-release
 ```
 
 And if building the multiple architecture image check
@@ -33,12 +38,12 @@ And if building the multiple architecture image check
 just check
 ```
 
-Currently it uses Ubuntu Noble Numbat 24.04.1 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of Noble Numbat during which these versions do not match.
+Currently it uses Ubuntu Noble Numbat 24.04.2 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of of an Ubuntu LTS during which these versions do not match.
 
 #### Building a solely amd64 architecture image
 
 ```bash
-docker pull --platform linux/amd64 rocker/r-ver:latest
+docker pull --platform linux/amd64 rocker/r-ver:4.5.0
 docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr .
 ```
 
