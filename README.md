@@ -38,7 +38,9 @@ And if building the multiple architecture image check
 just check
 ```
 
-Currently it uses Ubuntu Noble Numbat 24.04.2 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of of an Ubuntu LTS during which these versions do not match.
+Currently it uses Ubuntu Noble Numbat 24.04.2 LTS. This tells you if you can use the Linux binaries from r-universe which are currently built on Ubuntu Noble Numbat - it's safest to only use the binaries if these Ubuntu versions match. There is likely to be at least a 90 day period after the release of of an Ubuntu LTS during which these versions do not match, i.e., r-universe moves to the new LTS straight away but rocker takes longer to use the new LTS.
+
+If the bases do not match then you must only use source package URLs within _build.R_ (you will need to edit the file).
 
 #### Building a solely amd64 architecture image
 
