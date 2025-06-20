@@ -25,11 +25,11 @@ First go through the _Dockerfile_ and _build.R_ to check whether the versions of
 * <https://packagemanager.posit.co/client/#/repos/cran/setup>
 * <https://packagemanager.posit.co/client/#/repos/bioconductor/setup>
 
-Then check the current base of `rocker/r-ver:4.5.0` with
+Then check the current base of `rocker/r-ver:4.5.1` with
 
 ```bash
-docker pull --platform linux/amd64 rocker/r-ver:4.5.0
-docker run --platform linux/amd64 rocker/r-ver:4.5.0 cat /etc/lsb-release
+docker pull --platform linux/amd64 rocker/r-ver:4.5.1
+docker run --platform linux/amd64 rocker/r-ver:4.5.1 cat /etc/lsb-release
 ```
 
 And if building the multiple architecture image check
@@ -45,7 +45,7 @@ If the bases do not match then you must only use source package URLs within _bui
 #### Building a solely amd64 architecture image
 
 ```bash
-docker pull --platform linux/amd64 rocker/r-ver:4.5.0
+docker pull --platform linux/amd64 rocker/r-ver:4.5.1
 docker build --pull --no-cache --platform linux/amd64 -t mrcieu/twosamplemr .
 ```
 
