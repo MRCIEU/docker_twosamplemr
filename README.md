@@ -18,6 +18,10 @@ docker run -it mrcieu/twosamplemr:0.6.15 R
 
 If you are updating this and _don't_ have access to the mrcieu dockerhub organization please send your dockerhub username to [@t0mrg](https://github.com/t0mrg).
 
+### Check if you need to update the version of R
+
+Look in the code - if it needs updating, update the version in the _Dockerfile_, _justfile_, and _README.md_.
+
 ### Build the image
 
 First go through the _Dockerfile_ and _build.R_ to check whether the versions of R, Bioconductor, and the Posit Public Package Manager CRAN and Bioconductor snapshot date URLs are up to date - you can check those dates at
