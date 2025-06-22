@@ -17,13 +17,11 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
-[Previously saved workspace restored]
-
 > # Test script
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2025-06-20 07:48:44 UTC"
+[1] "2025-06-22 13:57:16 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -76,7 +74,6 @@ docopt                            "docopt"
 doRNG                             "doRNG"                            
 dplyr                             "dplyr"                            
 evaluate                          "evaluate"                         
-fansi                             "fansi"                            
 farver                            "farver"                           
 fastmap                           "fastmap"                          
 fontawesome                       "fontawesome"                      
@@ -289,8 +286,8 @@ cpp11                             "0.5.2"
 crayon                            "1.5.3"     
 crosstalk                         "1.2.1"     
 crul                              "1.5.0"     
-curl                              "6.2.3"     
-data.table                        "1.17.4"    
+curl                              "6.3.0"     
+data.table                        "1.17.6"    
 DBI                               "1.2.3"     
 DelayedArray                      "0.34.1"    
 DEoptimR                          "1.1-3-1"   
@@ -302,8 +299,7 @@ doBy                              "4.6.27"
 docopt                            "0.7.2"     
 doRNG                             "1.8.6.2"   
 dplyr                             "1.1.4"     
-evaluate                          "1.0.3"     
-fansi                             "1.0.6"     
+evaluate                          "1.0.4"     
 farver                            "2.1.2"     
 fastmap                           "1.2.0"     
 fontawesome                       "0.5.3"     
@@ -321,7 +317,7 @@ GenomicFeatures                   "1.60.0"
 GenomicRanges                     "1.60.0"    
 ggplot2                           "3.5.2"     
 ggrepel                           "0.9.6"     
-glmnet                            "4.1-8"     
+glmnet                            "4.1-9"     
 glue                              "1.8.0"     
 gmp                               "0.7-5"     
 GPArotation                       "2025.3-1"  
@@ -382,7 +378,7 @@ pillar                            "1.10.2"
 pkgbuild                          "1.4.8"     
 pkgconfig                         "2.0.3"     
 pkgload                           "1.4.0"     
-plotly                            "4.10.4"    
+plotly                            "4.11.0"    
 plyr                              "1.8.9"     
 png                               "0.1-8"     
 praise                            "1.0.0"     
@@ -415,7 +411,7 @@ rootSolve                         "1.8.2.4"
 rprojroot                         "2.0.4"     
 Rsamtools                         "2.24.0"    
 rsnps                             "0.6.1"     
-RSQLite                           "2.4.0"     
+RSQLite                           "2.4.1"     
 rtracklayer                       "1.68.0"    
 S4Arrays                          "1.8.1"     
 S4Vectors                         "0.46.0"    
@@ -431,17 +427,17 @@ stringr                           "1.5.1"
 SummarizedExperiment              "1.38.1"    
 sys                               "3.4.3"     
 testthat                          "3.2.3"     
-tibble                            "3.2.1"     
+tibble                            "3.3.0"     
 tidyr                             "1.3.1"     
 tidyselect                        "1.2.1"     
 tinytex                           "0.57"      
 triebeard                         "0.4.1"     
-TwoSampleMR                       "0.6.16"    
+TwoSampleMR                       "0.6.17"    
 TxDb.Hsapiens.UCSC.hg38.knownGene "3.21.0"    
 tzdb                              "0.5.0"     
 UCSC.utils                        "1.4.0"     
-urltools                          "1.7.3"     
-utf8                              "1.2.5"     
+urltools                          "1.7.3.1"   
+utf8                              "1.2.6"     
 vctrs                             "0.6.5"     
 viridisLite                       "0.4.2"     
 vroom                             "1.6.5"     
@@ -484,7 +480,7 @@ utils                             "4.5.1"
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.16 
+TwoSampleMR version 0.6.17 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -493,7 +489,7 @@ TwoSampleMR version 0.6.16
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.16’
+[1] ‘0.6.17’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -517,7 +513,7 @@ The following objects are masked from ‘package:base’:
 > library(ggplot2)
 > library(glmnet)
 Loading required package: Matrix
-Loaded glmnet 4.1-8
+Loaded glmnet 4.1-9
 > library(gridExtra)
 
 Attaching package: ‘gridExtra’
@@ -823,4 +819,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  7.666   2.173   8.612 
+  7.765   2.188   8.583 
