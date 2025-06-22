@@ -18,9 +18,11 @@ docker run -it mrcieu/twosamplemr:0.6.15 R
 
 If you are updating this and _don't_ have access to the mrcieu dockerhub organization please send your dockerhub username to [@t0mrg](https://github.com/t0mrg).
 
-### Check if you need to update the version of R
+### Things to check to update on every build
 
-Look in the code - if it needs updating, update the version in the _Dockerfile_, _justfile_, and _README.md_.
+* Check if the version of R needs updating: look in the code - if it needs updating, update the version in the _Dockerfile_, _justfile_, and _README.md_.
+* Check if the version of Bioconductor needs to be updated in _build.R_.
+* Update the PPPM snapshot dates in _build.R_.
 
 ### Build the image
 
