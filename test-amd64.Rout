@@ -21,7 +21,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2025-06-22 13:57:16 UTC"
+[1] "2025-07-15 11:15:15 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -279,23 +279,23 @@ car                               "3.1-3"
 carData                           "3.0-5"     
 cli                               "3.6.5"     
 clipr                             "0.8.0"     
-commonmark                        "1.9.5"     
-CompQuadForm                      "1.4.3"     
-cowplot                           "1.1.3"     
+commonmark                        "2.0.0"     
+CompQuadForm                      "1.4.4"     
+cowplot                           "1.2.0"     
 cpp11                             "0.5.2"     
 crayon                            "1.5.3"     
 crosstalk                         "1.2.1"     
 crul                              "1.5.0"     
-curl                              "6.3.0"     
-data.table                        "1.17.6"    
+curl                              "6.4.0"     
+data.table                        "1.17.8"    
 DBI                               "1.2.3"     
 DelayedArray                      "0.34.1"    
 DEoptimR                          "1.1-3-1"   
-Deriv                             "4.1.6"     
+Deriv                             "4.2.0"     
 desc                              "1.4.3"     
 diffobj                           "0.3.6"     
 digest                            "0.6.37"    
-doBy                              "4.6.27"    
+doBy                              "4.7.0"     
 docopt                            "0.7.2"     
 doRNG                             "1.8.6.2"   
 dplyr                             "1.1.4"     
@@ -336,7 +336,7 @@ iterators                         "1.0.14"
 iterpc                            "0.4.2"     
 jquerylib                         "0.1.4"     
 jsonlite                          "2.0.0"     
-KEGGREST                          "1.48.0"    
+KEGGREST                          "1.48.1"    
 knitr                             "1.50"      
 labeling                          "0.4.3"     
 lambda.r                          "1.2.4"     
@@ -374,7 +374,7 @@ numDeriv                          "2016.8-1.1"
 openssl                           "2.3.3"     
 pbapply                           "1.7-2"     
 pbkrtest                          "0.5.4"     
-pillar                            "1.10.2"    
+pillar                            "1.11.0"    
 pkgbuild                          "1.4.8"     
 pkgconfig                         "2.0.3"     
 pkgload                           "1.4.0"     
@@ -385,22 +385,22 @@ praise                            "1.0.0"
 processx                          "3.8.6"     
 promises                          "1.3.3"     
 ps                                "1.9.1"     
-psych                             "2.5.3"     
-purrr                             "1.0.4"     
+psych                             "2.5.6"     
+purrr                             "1.1.0"     
 quantreg                          "6.1"       
 R6                                "2.6.1"     
-RadialMR                          "1.2"       
+RadialMR                          "1.2.1"     
 randomForest                      "4.7-1.2"   
 rappdirs                          "0.3.3"     
 rbibutils                         "2.3"       
 RColorBrewer                      "1.1-3"     
-Rcpp                              "1.0.14"    
+Rcpp                              "1.1.0"     
 RCurl                             "1.98-1.17" 
 Rdpack                            "2.6.4"     
 readr                             "2.1.5"     
 reformulas                        "0.4.1"     
 reshape2                          "1.4.4"     
-restfulr                          "0.0.15"    
+restfulr                          "0.0.16"    
 Rhtslib                           "3.4.0"     
 rjson                             "0.2.23"    
 rlang                             "1.1.6"     
@@ -408,7 +408,7 @@ rmarkdown                         "2.29"
 rngtools                          "1.5.2"     
 robustbase                        "0.99-4-1"  
 rootSolve                         "1.8.2.4"   
-rprojroot                         "2.0.4"     
+rprojroot                         "2.1.0"     
 Rsamtools                         "2.24.0"    
 rsnps                             "0.6.1"     
 RSQLite                           "2.4.1"     
@@ -432,7 +432,7 @@ tidyr                             "1.3.1"
 tidyselect                        "1.2.1"     
 tinytex                           "0.57"      
 triebeard                         "0.4.1"     
-TwoSampleMR                       "0.6.17"    
+TwoSampleMR                       "0.6.18"    
 TxDb.Hsapiens.UCSC.hg38.knownGene "3.21.0"    
 tzdb                              "0.5.0"     
 UCSC.utils                        "1.4.0"     
@@ -441,7 +441,7 @@ utf8                              "1.2.6"
 vctrs                             "0.6.5"     
 viridisLite                       "0.4.2"     
 vroom                             "1.6.5"     
-waldo                             "0.6.1"     
+waldo                             "0.6.2"     
 withr                             "3.0.2"     
 xfun                              "0.52"      
 XML                               "3.99-0.18" 
@@ -480,7 +480,7 @@ utils                             "4.5.1"
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.17 
+TwoSampleMR version 0.6.18 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -489,7 +489,7 @@ TwoSampleMR version 0.6.17
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.17’
+[1] ‘0.6.18’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -819,4 +819,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  7.765   2.188   8.583 
+  7.419   1.963   7.374 
