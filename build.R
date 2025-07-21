@@ -53,7 +53,7 @@ options(
 )
 
 # install TwoSampleMR and hard and soft deps
-pak::pkg_install("TwoSampleMR", dependencies = TRUE)
+pak::pkg_install("MRCIEU/TwoSampleMR@*release", dependencies = TRUE)
 
 # install mr.raps Suggests packages from BioConductor
 pak::pkg_install(c("bumphunter", "TxDb.Hsapiens.UCSC.hg38.knownGene"))
