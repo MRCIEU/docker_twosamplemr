@@ -3,6 +3,8 @@ options(
   pkg.sysreqs_db_update_timeout = as.difftime(59, units = "secs")
 )
 
+cran_bioc_date <- "2025-07-18"
+
 # install prebuilt binary pak from pak repo
 install.packages(
   "pak",
@@ -21,15 +23,15 @@ Sys.setenv("R_BIOC_VERSION" = "3.21")
 if (R.Version()$arch == "x86_64") {
   # Linux binary package repos for x86_64
   pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-x86_64/4.5/")
-  pak::repo_add(CRAN = "https://p3m.dev/cran/__linux__/noble/2025-07-14")
-  pak::repo_add(BioCsoft = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-07-18")
+  pak::repo_add(CRAN = paste0("https://p3m.dev/cran/__linux__/noble/", cran_bioc_date))
+  pak::repo_add(BioCsoft = paste0("https://packagemanager.posit.co/bioconductor/__linux__/noble/", cran_bioc_date))
 }
 
 # Setup package URLs for ARM/AARCH64
 if (R.Version()$arch == "aarch64") {
   pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-aarch64/4.5/")
-  pak::repo_add(CRAN = "https://p3m.dev/cran/2025-07-18")
-  pak::repo_add(BioCsoft = "https://packagemanager.posit.co/bioconductor/2025-07-18")
+  pak::repo_add(CRAN = paste0("https://p3m.dev/cran/", cran_bioc_date))
+  pak::repo_add(BioCsoft = paste0("https://packagemanager.posit.co/bioconductor/", cran_bioc_date))
 }
 
 # Set HTTPUserAgent to obtain binary packages from Posit Public Package Manager on x86_64
@@ -47,7 +49,7 @@ options(
 )
 
 options(
-  BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/2025-07-18/config.yaml"
+  BIOCONDUCTOR_CONFIG_FILE = paste0("https://packagemanager.posit.co/bioconductor/", cran_bioc_date, "/config.yaml")
 )
 
 # install TwoSampleMR and hard and soft deps
