@@ -26,7 +26,7 @@ If you are updating this and _don't_ have access to the mrcieu dockerhub organiz
 
 ### Build the image
 
-First go through the _Dockerfile_ and _build.R_ to check whether the versions of R, Bioconductor, and the Posit Public Package Manager CRAN and Bioconductor snapshot date URLs are up to date - you can check those dates at
+First go through the _Dockerfile_ and _build.R_ to check whether the versions of R, Bioconductor, and the Posit Public Package Manager CRAN and Bioconductor snapshot date URLs are up to date (`cran_bioc_date`) - you can check those dates at
 
 * <https://packagemanager.posit.co/client/#/repos/cran/setup>
 * <https://packagemanager.posit.co/client/#/repos/bioconductor/setup>
