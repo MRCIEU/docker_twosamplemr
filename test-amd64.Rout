@@ -21,7 +21,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2025-07-15 11:15:15 UTC"
+[1] "2025-07-21 10:35:28 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -317,7 +317,7 @@ GenomicFeatures                   "1.60.0"
 GenomicRanges                     "1.60.0"    
 ggplot2                           "3.5.2"     
 ggrepel                           "0.9.6"     
-glmnet                            "4.1-9"     
+glmnet                            "4.1-10"    
 glue                              "1.8.0"     
 gmp                               "0.7-5"     
 GPArotation                       "2025.3-1"  
@@ -373,7 +373,7 @@ nortest                           "1.0-4"
 numDeriv                          "2016.8-1.1"
 openssl                           "2.3.3"     
 pbapply                           "1.7-2"     
-pbkrtest                          "0.5.4"     
+pbkrtest                          "0.5.5"     
 pillar                            "1.11.0"    
 pkgbuild                          "1.4.8"     
 pkgconfig                         "2.0.3"     
@@ -432,7 +432,7 @@ tidyr                             "1.3.1"
 tidyselect                        "1.2.1"     
 tinytex                           "0.57"      
 triebeard                         "0.4.1"     
-TwoSampleMR                       "0.6.18"    
+TwoSampleMR                       "0.6.19"    
 TxDb.Hsapiens.UCSC.hg38.knownGene "3.21.0"    
 tzdb                              "0.5.0"     
 UCSC.utils                        "1.4.0"     
@@ -480,7 +480,7 @@ utils                             "4.5.1"
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.18 
+TwoSampleMR version 0.6.19 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -489,7 +489,7 @@ TwoSampleMR version 0.6.18
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.18’
+[1] ‘0.6.19’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -513,7 +513,7 @@ The following objects are masked from ‘package:base’:
 > library(ggplot2)
 > library(glmnet)
 Loading required package: Matrix
-Loaded glmnet 4.1-9
+Loaded glmnet 4.1-10
 > library(gridExtra)
 
 Attaching package: ‘gridExtra’
@@ -819,4 +819,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  7.419   1.963   7.374 
+  8.348   2.441   9.429 
