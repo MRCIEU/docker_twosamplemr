@@ -22,14 +22,14 @@ if (R.Version()$arch == "x86_64") {
   # Linux binary package repos for x86_64
   pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-x86_64/4.5/")
   pak::repo_add(CRAN = "https://p3m.dev/cran/__linux__/noble/2025-07-14")
-  pak::repo_add(BioCsoft = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-07-14")
+  pak::repo_add(BioCsoft = "https://packagemanager.posit.co/bioconductor/__linux__/noble/2025-07-18")
 }
 
 # Setup package URLs for ARM/AARCH64
 if (R.Version()$arch == "aarch64") {
   pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-aarch64/4.5/")
-  pak::repo_add(CRAN = "https://p3m.dev/cran/2025-06-20")
-  pak::repo_add(BioCsoft = "https://packagemanager.posit.co/bioconductor/2025-07-14")
+  pak::repo_add(CRAN = "https://p3m.dev/cran/2025-07-18")
+  pak::repo_add(BioCsoft = "https://packagemanager.posit.co/bioconductor/2025-07-18")
 }
 
 # Set HTTPUserAgent to obtain binary packages from Posit Public Package Manager on x86_64
@@ -47,7 +47,7 @@ options(
 )
 
 options(
-  BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/2025-07-14/config.yaml"
+  BIOCONDUCTOR_CONFIG_FILE = "https://packagemanager.posit.co/bioconductor/2025-07-18/config.yaml"
 )
 
 # install TwoSampleMR and hard and soft deps
