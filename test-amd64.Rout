@@ -17,11 +17,13 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 'help.start()' for an HTML browser interface to help.
 Type 'q()' to quit R.
 
+[Previously saved workspace restored]
+
 > # Test script
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2025-07-21 10:35:28 UTC"
+[1] "2025-08-01 12:35:08 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -269,7 +271,7 @@ bit64                             "4.6.0-1"
 bitops                            "1.0-9"     
 blob                              "1.2.4"     
 brio                              "1.1.5"     
-broom                             "1.0.8"     
+broom                             "1.0.9"     
 bslib                             "0.9.0"     
 bumphunter                        "1.50.0"    
 cachem                            "1.1.0"     
@@ -285,12 +287,12 @@ cowplot                           "1.2.0"
 cpp11                             "0.5.2"     
 crayon                            "1.5.3"     
 crosstalk                         "1.2.1"     
-crul                              "1.5.0"     
+crul                              "1.6.0"     
 curl                              "6.4.0"     
 data.table                        "1.17.8"    
 DBI                               "1.2.3"     
 DelayedArray                      "0.34.1"    
-DEoptimR                          "1.1-3-1"   
+DEoptimR                          "1.1-4"     
 Deriv                             "4.2.0"     
 desc                              "1.4.3"     
 diffobj                           "0.3.6"     
@@ -310,7 +312,7 @@ fs                                "1.6.6"
 futile.logger                     "1.4.3"     
 futile.options                    "1.0.1"     
 generics                          "0.1.4"     
-GenomeInfoDb                      "1.44.0"    
+GenomeInfoDb                      "1.44.1"    
 GenomeInfoDbData                  "1.2.14"    
 GenomicAlignments                 "1.44.0"    
 GenomicFeatures                   "1.60.0"    
@@ -329,7 +331,7 @@ htmltools                         "0.5.8.1"
 htmlwidgets                       "1.6.4"     
 httpcode                          "0.3.0"     
 httr                              "1.4.7"     
-ieugwasr                          "1.0.4"     
+ieugwasr                          "1.1.0"     
 IRanges                           "2.42.0"    
 isoband                           "0.2.7"     
 iterators                         "1.0.14"    
@@ -356,7 +358,7 @@ MatrixModels                      "0.5-4"
 matrixStats                       "1.5.0"     
 memoise                           "2.0.1"     
 MendelianRandomization            "0.10.0"    
-meta                              "8.1-0"     
+meta                              "8.2-0"     
 metadat                           "1.4-0"     
 metafor                           "4.8-0"     
 microbenchmark                    "1.5.0"     
@@ -372,7 +374,7 @@ nloptr                            "2.2.1"
 nortest                           "1.0-4"     
 numDeriv                          "2016.8-1.1"
 openssl                           "2.3.3"     
-pbapply                           "1.7-2"     
+pbapply                           "1.7-4"     
 pbkrtest                          "0.5.5"     
 pillar                            "1.11.0"    
 pkgbuild                          "1.4.8"     
@@ -411,7 +413,7 @@ rootSolve                         "1.8.2.4"
 rprojroot                         "2.1.0"     
 Rsamtools                         "2.24.0"    
 rsnps                             "0.6.1"     
-RSQLite                           "2.4.1"     
+RSQLite                           "2.4.2"     
 rtracklayer                       "1.68.0"    
 S4Arrays                          "1.8.1"     
 S4Vectors                         "0.46.0"    
@@ -419,7 +421,7 @@ sass                              "0.4.10"
 scales                            "1.4.0"     
 shape                             "1.4.6.1"   
 snow                              "0.4-4"     
-SparseArray                       "1.8.0"     
+SparseArray                       "1.8.1"     
 SparseM                           "1.84-2"    
 statmod                           "1.5.0"     
 stringi                           "1.8.7"     
@@ -432,7 +434,7 @@ tidyr                             "1.3.1"
 tidyselect                        "1.2.1"     
 tinytex                           "0.57"      
 triebeard                         "0.4.1"     
-TwoSampleMR                       "0.6.19"    
+TwoSampleMR                       "0.6.20"    
 TxDb.Hsapiens.UCSC.hg38.knownGene "3.21.0"    
 tzdb                              "0.5.0"     
 UCSC.utils                        "1.4.0"     
@@ -480,7 +482,7 @@ utils                             "4.5.1"
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.19 
+TwoSampleMR version 0.6.20 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -489,7 +491,7 @@ TwoSampleMR version 0.6.19
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.19’
+[1] ‘0.6.20’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -551,7 +553,7 @@ The following object is masked from ‘package:dplyr’:
 
 > library(meta)
 Loading required package: metadat
-Loading 'meta' package (version 8.1-0).
+Loading 'meta' package (version 8.2-0).
 Type 'help(meta)' for a brief overview.
 > library(MRMix)
 > library(MRPRESSO)
@@ -819,4 +821,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  8.348   2.441   9.429 
+  7.989   1.930   8.321 
