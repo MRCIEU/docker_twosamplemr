@@ -23,7 +23,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2025-08-01 12:35:17 UTC"
+[1] "2025-08-11 10:59:15 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -154,14 +154,11 @@ pillar                            "pillar"
 pkgbuild                          "pkgbuild"                         
 pkgconfig                         "pkgconfig"                        
 pkgload                           "pkgload"                          
-plogr                             "plogr"                            
 plotly                            "plotly"                           
 plyr                              "plyr"                             
 png                               "png"                              
 praise                            "praise"                           
-prettyunits                       "prettyunits"                      
 processx                          "processx"                         
-progress                          "progress"                         
 promises                          "promises"                         
 ps                                "ps"                               
 psych                             "psych"                            
@@ -174,7 +171,6 @@ rappdirs                          "rappdirs"
 rbibutils                         "rbibutils"                        
 RColorBrewer                      "RColorBrewer"                     
 Rcpp                              "Rcpp"                             
-RcppEigen                         "RcppEigen"                        
 RCurl                             "RCurl"                            
 Rdpack                            "Rdpack"                           
 readr                             "readr"                            
@@ -349,7 +345,7 @@ lambda.r                          "1.2.4"
 later                             "1.4.2"     
 lazyeval                          "0.2.2"     
 lifecycle                         "1.0.4"     
-limma                             "3.64.1"    
+limma                             "3.64.3"    
 litedown                          "0.7"       
 littler                           "0.3.21"    
 lme4                              "1.1-37"    
@@ -384,14 +380,11 @@ pillar                            "1.11.0"
 pkgbuild                          "1.4.8"     
 pkgconfig                         "2.0.3"     
 pkgload                           "1.4.0"     
-plogr                             "0.2.0"     
 plotly                            "4.11.0"    
 plyr                              "1.8.9"     
 png                               "0.1-8"     
 praise                            "1.0.0"     
-prettyunits                       "1.2.0"     
 processx                          "3.8.6"     
-progress                          "1.2.3"     
 promises                          "1.3.3"     
 ps                                "1.9.1"     
 psych                             "2.5.6"     
@@ -404,7 +397,6 @@ rappdirs                          "0.3.3"
 rbibutils                         "2.3"       
 RColorBrewer                      "1.1-3"     
 Rcpp                              "1.1.0"     
-RcppEigen                         "0.3.4.0.2" 
 RCurl                             "1.98-1.17" 
 Rdpack                            "2.6.4"     
 readr                             "2.1.5"     
@@ -442,7 +434,7 @@ tidyr                             "1.3.1"
 tidyselect                        "1.2.1"     
 tinytex                           "0.57"      
 triebeard                         "0.4.1"     
-TwoSampleMR                       "0.6.20"    
+TwoSampleMR                       "0.6.21"    
 TxDb.Hsapiens.UCSC.hg38.knownGene "3.21.0"    
 tzdb                              "0.5.0"     
 UCSC.utils                        "1.4.0"     
@@ -490,7 +482,7 @@ utils                             "4.5.1"
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.20 
+TwoSampleMR version 0.6.21 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -499,7 +491,7 @@ TwoSampleMR version 0.6.20
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.20’
+[1] ‘0.6.21’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -829,4 +821,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  4.537   0.719   5.415 
+  4.478   0.720   5.204 
