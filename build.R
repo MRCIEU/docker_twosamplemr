@@ -23,14 +23,14 @@ Sys.setenv("R_BIOC_VERSION" = "3.21")
 if (R.Version()$arch == "x86_64") {
   # Linux binary package repos for x86_64
   pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-x86_64/4.5/")
-  pak::repo_add(CRAN = paste0("https://p3m.dev/cran/__linux__/noble/", cran_bioc_date))
+  pak::repo_add(CRAN = "https://cran.r-universe.dev/bin/linux/noble-x86_64/4.5/")
   pak::repo_add(BioCsoft = paste0("https://packagemanager.posit.co/bioconductor/__linux__/noble/", cran_bioc_date))
 }
 
 # Setup package URLs for ARM/AARCH64
 if (R.Version()$arch == "aarch64") {
   pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-aarch64/4.5/")
-  pak::repo_add(CRAN = paste0("https://p3m.dev/cran/", cran_bioc_date))
+  pak::repo_add(CRAN = "https://cran.r-universe.dev/bin/linux/noble-aarch64/4.5/")
   pak::repo_add(BioCsoft = paste0("https://packagemanager.posit.co/bioconductor/", cran_bioc_date))
 }
 
