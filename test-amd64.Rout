@@ -21,7 +21,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2025-10-31 12:51:48 UTC"
+[1] "2025-10-31 15:36:29 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -435,7 +435,7 @@ tidyr                             "1.3.1"
 tidyselect                        "1.2.1"     
 tinytex                           "0.57"      
 triebeard                         "0.4.1"     
-TwoSampleMR                       "0.6.23"    
+TwoSampleMR                       "0.6.24"    
 TxDb.Hsapiens.UCSC.hg38.knownGene "3.22.0"    
 tzdb                              "0.5.0"     
 urltools                          "1.7.3.1"   
@@ -482,7 +482,7 @@ utils                             "4.5.1"
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.23 
+TwoSampleMR version 0.6.24 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -491,7 +491,7 @@ TwoSampleMR version 0.6.23
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.23’
+[1] ‘0.6.24’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -821,4 +821,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  6.988   1.938   7.862 
+  6.956   1.764   7.449 
