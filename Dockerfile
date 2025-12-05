@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.11
 # enable docker linting
 # check=error=true
-FROM rocker/r-ver:4.5.1
+FROM rocker/r-ver:4.5.2
 WORKDIR /usr/local/src/myscripts
 RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -yyy \

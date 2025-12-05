@@ -13,10 +13,10 @@ publish version:
     docker push mrcieu/twosamplemr:latest
 
 check:
-    docker pull --platform linux/amd64 rocker/r-ver:4.5.1
-    docker run --platform linux/amd64 rocker/r-ver:4.5.1 cat /etc/lsb-release
-    docker pull --platform linux/arm64 rocker/r-ver:4.5.1
-    docker run --platform linux/arm64 rocker/r-ver:4.5.1 cat /etc/lsb-release
+    docker pull --platform linux/amd64 rocker/r-ver:4.5.2
+    docker run --platform linux/amd64 rocker/r-ver:4.5.2 cat /etc/lsb-release
+    docker pull --platform linux/arm64 rocker/r-ver:4.5.2
+    docker run --platform linux/arm64 rocker/r-ver:4.5.2 cat /etc/lsb-release
 
 all version:
     {{ just_executable() }} check
