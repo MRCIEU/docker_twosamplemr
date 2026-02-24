@@ -21,7 +21,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2026-02-06 14:05:08 UTC"
+[1] "2026-02-24 10:43:54 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -165,8 +165,6 @@ promises                          "promises"
 ps                                "ps"                               
 psych                             "psych"                            
 purrr                             "purrr"                            
-quadprog                          "quadprog"                         
-quantmod                          "quantmod"                         
 quantreg                          "quantreg"                         
 R6                                "R6"                               
 RadialMR                          "RadialMR"                         
@@ -215,8 +213,6 @@ tidyselect                        "tidyselect"
 timeDate                          "timeDate"                         
 tinytex                           "tinytex"                          
 triebeard                         "triebeard"                        
-tseries                           "tseries"                          
-TTR                               "TTR"                              
 TwoSampleMR                       "TwoSampleMR"                      
 TxDb.Hsapiens.UCSC.hg38.knownGene "TxDb.Hsapiens.UCSC.hg38.knownGene"
 tzdb                              "tzdb"                             
@@ -231,7 +227,6 @@ withr                             "withr"
 xfun                              "xfun"                             
 XML                               "XML"                              
 xml2                              "xml2"                             
-xts                               "xts"                              
 XVector                           "XVector"                          
 yaml                              "yaml"                             
 zoo                               "zoo"                              
@@ -319,7 +314,7 @@ farver                            "2.1.2"
 fastmap                           "1.2.0"     
 fontawesome                       "0.5.3"     
 foreach                           "1.5.2"     
-forecast                          "9.0.0"     
+forecast                          "9.0.1"     
 formatR                           "1.14"      
 Formula                           "1.2-5"     
 fracdiff                          "1.5-3"     
@@ -334,7 +329,7 @@ ggplot2                           "4.0.2"
 ggrepel                           "0.9.6"     
 glmnet                            "4.1-10"    
 glue                              "1.8.0"     
-gmp                               "0.7-5"     
+gmp                               "0.7-5.1"   
 GPArotation                       "2025.3-1"  
 gridExtra                         "2.3"       
 gtable                            "0.3.6"     
@@ -343,7 +338,7 @@ hms                               "1.1.4"
 htmltools                         "0.5.9"     
 htmlwidgets                       "1.6.4"     
 httpcode                          "0.3.0"     
-httr                              "1.4.7"     
+httr                              "1.4.8"     
 ieugwasr                          "1.1.0.9000"
 IRanges                           "2.44.0"    
 isoband                           "0.3.0"     
@@ -355,7 +350,7 @@ KEGGREST                          "1.50.0"
 knitr                             "1.51"      
 labeling                          "0.4.3"     
 lambda.r                          "1.2.4"     
-later                             "1.4.5"     
+later                             "1.4.7"     
 lazyeval                          "0.2.2"     
 lifecycle                         "1.0.5"     
 limma                             "3.66.0"    
@@ -404,8 +399,6 @@ promises                          "1.5.0"
 ps                                "1.9.1"     
 psych                             "2.6.1"     
 purrr                             "1.2.1"     
-quadprog                          "1.5-8"     
-quantmod                          "0.4.28"    
 quantreg                          "6.1"       
 R6                                "2.6.1"     
 RadialMR                          "1.2.1"     
@@ -415,8 +408,8 @@ rbibutils                         "2.4.1"
 RColorBrewer                      "1.1-3"     
 Rcpp                              "1.1.1"     
 RCurl                             "1.98-1.17" 
-Rdpack                            "2.6.5"     
-readr                             "2.1.6"     
+Rdpack                            "2.6.6"     
+readr                             "2.2.0"     
 reformulas                        "0.4.4"     
 reshape2                          "1.4.5"     
 restfulr                          "0.0.16"    
@@ -430,7 +423,7 @@ rootSolve                         "1.8.2.4"
 rprojroot                         "2.1.1"     
 Rsamtools                         "2.26.0"    
 rsnps                             "0.6.1"     
-RSQLite                           "2.4.5"     
+RSQLite                           "2.4.6"     
 rtracklayer                       "1.70.1"    
 S4Arrays                          "1.10.1"    
 S4Vectors                         "0.48.0"    
@@ -454,9 +447,7 @@ tidyselect                        "1.2.1"
 timeDate                          "4052.112"  
 tinytex                           "0.58"      
 triebeard                         "0.4.1"     
-tseries                           "0.10-59"   
-TTR                               "0.24.4"    
-TwoSampleMR                       "0.6.30"    
+TwoSampleMR                       "0.7.0"     
 TxDb.Hsapiens.UCSC.hg38.knownGene "3.22.0"    
 tzdb                              "0.5.0"     
 urca                              "1.3-4"     
@@ -468,9 +459,8 @@ vroom                             "1.7.0"
 waldo                             "0.6.2"     
 withr                             "3.0.2"     
 xfun                              "0.56"      
-XML                               "3.99-0.20" 
+XML                               "3.99-0.22" 
 xml2                              "1.5.2"     
-xts                               "0.14.1"    
 XVector                           "0.50.0"    
 yaml                              "2.3.12"    
 zoo                               "1.8-15"    
@@ -506,7 +496,7 @@ utils                             "4.5.2"
 > 
 > # Loads TwoSampleMR and all its dependency packages
 > library(TwoSampleMR)
-TwoSampleMR version 0.6.30 
+TwoSampleMR version 0.7.0 
 
   [>] New authentication requirements: https://mrcieu.github.io/ieugwasr/articles/guide.html#authentication.
   [>] Major upgrades to our servers completed to improve service and stability.
@@ -515,7 +505,7 @@ TwoSampleMR version 0.6.30
       https://forms.office.com/e/eSr7EFAfCG
 > 
 > packageVersion("TwoSampleMR")
-[1] ‘0.6.30’
+[1] ‘0.7.0’
 > 
 > # Imports packages (from TwoSampleMR DESCRIPTION file)
 > library(cowplot)
@@ -836,4 +826,4 @@ The following object is masked from ‘package:dplyr’:
 > 
 > proc.time()
    user  system elapsed 
-  4.883   1.227   5.636 
+  5.616   1.387   6.194 
