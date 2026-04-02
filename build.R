@@ -3,7 +3,7 @@ options(
   pkg.sysreqs_db_update_timeout = as.difftime(59, units = "secs")
 )
 
-cran_bioc_date <- "2026-03-31"
+cran_bioc_date <- "2026-04-01"
 
 # install prebuilt binary pak from pak repo
 install.packages(
