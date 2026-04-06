@@ -22,6 +22,7 @@ Sys.setenv("R_BIOC_VERSION" = "3.22")
 # Setup package URLs for x86_64
 if (R.Version()$arch == "x86_64") {
   # Linux binary package repos for x86_64
+  pak::repo_add(runibcrel = "https://bioc-release.r-universe.dev/bin/linux/noble-x86_64/4.5/")
   pak::repo_add(pppm = paste0("https://packagemanager.posit.co/cran/", cran_bioc_date, "/bin/linux/noble-x86_64/4.5"))
   pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-x86_64/4.5/")
   pak::repo_add(CRAN = "https://cran.r-universe.dev/bin/linux/noble-x86_64/4.5/")
@@ -30,6 +31,7 @@ if (R.Version()$arch == "x86_64") {
 
 # Setup package URLs for ARM/AARCH64
 if (R.Version()$arch == "aarch64") {
+  pak::repo_add(runibcrel = "https://bioc-release.r-universe.dev/bin/linux/noble-aarch64/4.5/")
   pak::repo_add(pppm = paste0("https://packagemanager.posit.co/cran/", cran_bioc_date, "/bin/linux/noble-aarch64/4.5"))
   pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-aarch64/4.5/")
   pak::repo_add(CRAN = "https://cran.r-universe.dev/bin/linux/noble-aarch64/4.5/")
