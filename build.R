@@ -17,7 +17,7 @@ install.packages(
 )
 
 # Set the Bioconductor version to prevent defaulting to a newer version:
-Sys.setenv("R_BIOC_VERSION" = "3.22")
+Sys.setenv("R_BIOC_VERSION" = "3.23")
 
 # Setup package URLs for x86_64
 if (R.Version()$arch == "x86_64") {
