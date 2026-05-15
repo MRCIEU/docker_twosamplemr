@@ -25,3 +25,7 @@ all version:
     {{ just_executable() }} build
     {{ just_executable() }} test
     {{ just_executable() }} publish {{ version }}
+
+both:
+    {{ just_executable() }} build
+    {{ just_executable() }} test
