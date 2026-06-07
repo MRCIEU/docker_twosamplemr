@@ -21,7 +21,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2026-06-07 06:53:01 UTC"
+[1] "2026-06-07 06:58:47 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -501,301 +501,44 @@ TwoSampleMR version 0.7.7
 > packageVersion("TwoSampleMR")
 [1] ‘0.7.7’
 > 
-> # Imports packages (from TwoSampleMR DESCRIPTION file)
-> library(cli)
-> library(cowplot)
-> library(data.table)
-
-Attaching package: ‘data.table’
-
-The following object is masked from ‘package:base’:
-
-    %notin%
-
-> library(dplyr)
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:data.table’:
-
-    between, first, last
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-> library(ggplot2)
-> library(glmnet)
-Loading required package: Matrix
-Loaded glmnet 5.0
-> library(gridExtra)
-
-Attaching package: ‘gridExtra’
-
-The following object is masked from ‘package:dplyr’:
-
-    combine
-
-> library(gtable)
-> library(ieugwasr)
-OpenGWAS updates:
-  Date: 2024-05-17
-  [>] OpenGWAS is growing!
-  [>] Please take 2 minutes to give us feedback -
-  [>] It will help directly shape our emerging roadmap
-  [>] https://forms.office.com/e/eSr7EFAfCG
-
-Attaching package: ‘ieugwasr’
-
-The following object is masked from ‘package:TwoSampleMR’:
-
-    ld_matrix
-
-> library(jsonlite)
-> library(knitr)
-> library(lattice)
-> library(magrittr)
-> library(MASS)
-
-Attaching package: ‘MASS’
-
-The following object is masked from ‘package:dplyr’:
-
-    select
-
-> library(MRMix)
-> library(MRPRESSO)
-> library(pbapply)
-> library(psych)
-
-Attaching package: ‘psych’
-
-The following objects are masked from ‘package:ggplot2’:
-
-    %+%, alpha
-
-> library(RadialMR)
-> library(rmarkdown)
-> library(tidyr)
-
-Attaching package: ‘tidyr’
-
-The following object is masked from ‘package:magrittr’:
-
-    extract
-
-The following objects are masked from ‘package:Matrix’:
-
-    expand, pack, unpack
-
+> # Programmatically determine the declared dependencies of TwoSampleMR and
+> # mr.raps directly from their installed DESCRIPTION files, so this test stays
+> # in sync automatically when the packages reorganize their dependencies.
+> #
+> # mr.raps is listed explicitly because the build installs its dependencies
+> # (rsnps, bumphunter, TxDb.Hsapiens.UCSC.hg38.knownGene) separately and we
+> # want them exercised here. recursive = FALSE keeps us to direct dependencies
+> # rather than descending into the full (partly uninstalled) Bioconductor tree.
+> root_pkgs <- c("TwoSampleMR", "mr.raps")
+> deps <- tools::package_dependencies(
++   root_pkgs,
++   which = c("Depends", "Imports", "Suggests"),
++   recursive = FALSE
++ )
+> to_load <- sort(setdiff(
++   unique(unlist(deps, use.names = FALSE)),
++   c(root_pkgs, "R")
++ ))
 > 
-> # Suggests packages (from TwoSampleMR DESCRIPTION file)
-> library(Cairo)
-> library(car)
-Loading required package: carData
-
-Attaching package: ‘car’
-
-The following object is masked from ‘package:psych’:
-
-    logit
-
-The following object is masked from ‘package:dplyr’:
-
-    recode
-
-> library(markdown)
-> library(MendelianRandomization)
-
-Attaching package: ‘MendelianRandomization’
-
-The following objects are masked from ‘package:TwoSampleMR’:
-
-    mr_ivw, mr_median
-
-> library(meta)
-Loading required package: metabook
-Registered S3 method overwritten by 'lme4':
-  method           from
-  na.action.merMod car 
-Loading 'meta' package (version 8.5-0).
-Type 'help(meta)' for a brief overview.
-> library(mr.raps)
-> library(MRInstruments)
-> library(randomForest)
-randomForest 4.7-1.2
-Type rfNews() to see new features/changes/bug fixes.
-
-Attaching package: ‘randomForest’
-
-The following object is masked from ‘package:psych’:
-
-    outlier
-
-The following object is masked from ‘package:gridExtra’:
-
-    combine
-
-The following object is masked from ‘package:ggplot2’:
-
-    margin
-
-The following object is masked from ‘package:dplyr’:
-
-    combine
-
-> library(testthat)
-
-Attaching package: ‘testthat’
-
-The following object is masked from ‘package:psych’:
-
-    describe
-
-The following objects are masked from ‘package:magrittr’:
-
-    equals, is_less_than, not
-
+> # Attempt to attach each declared dependency, collecting every failure so a
+> # single run reports all missing packages (not just the first).
+> failed <- character(0)
+> for (pkg in to_load) {
++   ok <- tryCatch({
++     suppressPackageStartupMessages(library(pkg, character.only = TRUE))
++     TRUE
++   }, error = function(e) FALSE)
++   message(sprintf("%-35s %s", pkg, if (ok) "OK" else "FAILED"))
++   if (!ok) failed <- c(failed, pkg)
++ }
 > 
-> # mr.raps Imports
-> library(rsnps)
-> # mr.raps Suggests
-> library(bumphunter)
-Loading required package: S4Vectors
-Loading required package: stats4
-Loading required package: BiocGenerics
-Loading required package: generics
-
-Attaching package: ‘generics’
-
-The following object is masked from ‘package:dplyr’:
-
-    explain
-
-The following objects are masked from ‘package:base’:
-
-    as.difftime, as.factor, as.ordered, intersect, is.element, setdiff,
-    setequal, union
-
-
-Attaching package: ‘BiocGenerics’
-
-The following object is masked from ‘package:randomForest’:
-
-    combine
-
-The following object is masked from ‘package:gridExtra’:
-
-    combine
-
-The following object is masked from ‘package:dplyr’:
-
-    combine
-
-The following objects are masked from ‘package:stats’:
-
-    IQR, mad, sd, var, xtabs
-
-The following objects are masked from ‘package:base’:
-
-    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
-    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
-    get, grep, grepl, is.unsorted, lapply, Map, mapply, match, mget,
-    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
-    rbind, Reduce, rownames, sapply, saveRDS, table, tapply, unique,
-    unsplit, which.max, which.min
-
-
-Attaching package: ‘S4Vectors’
-
-The following object is masked from ‘package:MendelianRandomization’:
-
-    values
-
-The following object is masked from ‘package:tidyr’:
-
-    expand
-
-The following objects are masked from ‘package:Matrix’:
-
-    expand, unname
-
-The following objects are masked from ‘package:dplyr’:
-
-    first, rename
-
-The following objects are masked from ‘package:data.table’:
-
-    first, second
-
-The following object is masked from ‘package:utils’:
-
-    findMatches
-
-The following objects are masked from ‘package:base’:
-
-    expand.grid, I, unname
-
-Loading required package: IRanges
-
-Attaching package: ‘IRanges’
-
-The following objects are masked from ‘package:psych’:
-
-    distance, reflect
-
-The following objects are masked from ‘package:dplyr’:
-
-    collapse, desc, slice
-
-The following object is masked from ‘package:data.table’:
-
-    shift
-
-The following object is masked from ‘package:TwoSampleMR’:
-
-    trim
-
-Loading required package: Seqinfo
-Loading required package: GenomicRanges
-
-Attaching package: ‘GenomicRanges’
-
-The following object is masked from ‘package:magrittr’:
-
-    subtract
-
-Loading required package: foreach
-Loading required package: iterators
-Loading required package: parallel
-Loading required package: locfit
-locfit 1.5-9.12 	 2025-03-05
-> library(TxDb.Hsapiens.UCSC.hg38.knownGene)
-Loading required package: GenomicFeatures
-Loading required package: AnnotationDbi
-Loading required package: Biobase
-Welcome to Bioconductor
-
-    Vignettes contain introductory material; view with
-    'browseVignettes()'. To cite Bioconductor, see
-    'citation("Biobase")', and for packages 'citation("pkgname")'.
-
-
-Attaching package: ‘AnnotationDbi’
-
-The following object is masked from ‘package:MASS’:
-
-    select
-
-The following object is masked from ‘package:dplyr’:
-
-    select
-
+> if (length(failed)) {
++   stop(
++     "Declared dependencies not installed: ",
++     paste(failed, collapse = ", ")
++   )
++ }
 > 
 > proc.time()
    user  system elapsed 
- 24.979   4.245  30.593 
+  1.289   0.974   4.263 
