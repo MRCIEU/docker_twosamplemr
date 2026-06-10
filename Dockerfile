@@ -3,8 +3,11 @@
 # check=error=true
 FROM rocker/r-ver:4.6.0
 WORKDIR /usr/local/src/myscripts
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
-    apt-get install -yyy \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update \
+        -o Acquire::Retries=5 \
+        -o Acquire::http::No-Cache=true \
+        -o Acquire::https::No-Cache=true && \
+    apt-get install -y --no-install-recommends \
         build-essential \
         libcurl4-openssl-dev \
         libxml2-dev \
@@ -16,7 +19,8 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
         libharfbuzz-dev \
         libtiff-dev \
         libstdc++6 \
-        pandoc
+        pandoc && \
+    rm -rf /var/lib/apt/lists/*
 
 # Wait until MRCIEU R-Universe has built latest version of the TwoSampleMR binary
 # Should be 1 hour or maybe overnight
