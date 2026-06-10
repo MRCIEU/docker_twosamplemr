@@ -3,10 +3,14 @@
 # check=error=true
 FROM rocker/r-ver:4.6.0
 WORKDIR /usr/local/src/myscripts
-RUN DEBIAN_FRONTEND=noninteractive apt-get update \
-        -o Acquire::Retries=5 \
-        -o Acquire::http::No-Cache=true \
-        -o Acquire::https::No-Cache=true && \
+RUN printf '%s\n' \
+        'Acquire::Retries "5";' \
+        'Acquire::http::No-Cache "true";' \
+        'Acquire::https::No-Cache "true";' \
+        'Acquire::http::Pipeline-Depth "0";' \
+        'Acquire::BrokenProxy "true";' \
+        > /etc/apt/apt.conf.d/99harden && \
+    DEBIAN_FRONTEND=noninteractive apt-get update && \
     apt-get install -y --no-install-recommends \
         build-essential \
         libcurl4-openssl-dev \
