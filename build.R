@@ -19,45 +19,24 @@ install.packages(
 # Set the Bioconductor version to prevent defaulting to a newer version:
 Sys.setenv("R_BIOC_VERSION" = "3.23")
 
-# Setup package URLs for x86_64
-if (R.Version()$arch == "x86_64") {
-  # Linux binary package repos for x86_64
-  pak::repo_add(runibcrel = "https://bioc-release.r-universe.dev/bin/linux/noble-x86_64/4.6/")
-  pak::repo_add(pppm = paste0("https://packagemanager.posit.co/cran/", cran_bioc_date, "/bin/linux/noble-x86_64/4.6"))
-  pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-x86_64/4.6/")
-  pak::repo_add(CRAN = "https://cran.r-universe.dev/bin/linux/noble-x86_64/4.6/")
-  pak::repo_add(BioCsoft = paste0("https://packagemanager.posit.co/bioconductor/__linux__/noble/", cran_bioc_date))
-}
+# Binary CRAN packages from Posit Public Package Manager, pinned by date.
+# The __linux__/noble form is what lets pak negotiate Ubuntu Noble binaries;
+# a hardcoded /bin/linux/... path is served as SOURCE and silently defeats this.
+# These URLs are architecture-agnostic: pak requests the correct binary for
+# whichever platform (x86_64 or aarch64) the image is being built on.
+pak::repo_add(CRAN = paste0("https://packagemanager.posit.co/cran/__linux__/noble/", cran_bioc_date))
 
-# Setup package URLs for ARM/AARCH64
-if (R.Version()$arch == "aarch64") {
-  pak::repo_add(runibcrel = "https://bioc-release.r-universe.dev/bin/linux/noble-aarch64/4.6/")
-  pak::repo_add(pppm = paste0("https://packagemanager.posit.co/cran/", cran_bioc_date, "/bin/linux/noble-aarch64/4.6"))
-  pak::repo_add(universe = "https://mrcieu.r-universe.dev/bin/linux/noble-aarch64/4.6/")
-  pak::repo_add(CRAN = "https://cran.r-universe.dev/bin/linux/noble-aarch64/4.6/")
-  pak::repo_add(BioCsoft = paste0("https://packagemanager.posit.co/bioconductor/", cran_bioc_date))
-}
-
-# Set HTTPUserAgent to obtain binary packages from Posit Public Package Manager on x86_64
-options(
-  HTTPUserAgent = sprintf(
-    'R/%s R (%s)',
-    getRversion(),
-    paste(
-      getRversion(),
-      R.version['platform'],
-      R.version['arch'],
-      R.version['os']
-    )
-  )
-)
+# Prebuilt MRCIEU packages (TwoSampleMR, MRPRESSO, MRMix, RadialMR, ieugwasr, ...)
+# come from R-universe, so installing TwoSampleMR by name below takes them as
+# built packages rather than recompiling from GitHub source.
+pak::repo_add(universe = "https://mrcieu.r-universe.dev")
 
 options(
   BIOCONDUCTOR_CONFIG_FILE = paste0("https://packagemanager.posit.co/bioconductor/", cran_bioc_date, "/config.yaml")
 )
 
-# install TwoSampleMR and hard and soft deps
-pak::pkg_install("MRCIEU/TwoSampleMR@*release", dependencies = TRUE)
+# install TwoSampleMR and hard and soft deps (resolved from R-universe by name)
+pak::pkg_install("TwoSampleMR", dependencies = TRUE)
 
 # install mr.raps Suggests packages from BioConductor
 pak::pkg_install(c("bumphunter", "TxDb.Hsapiens.UCSC.hg38.knownGene"))
