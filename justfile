@@ -1,8 +1,8 @@
 build:
-    docker buildx build --pull --platform linux/arm64,linux/amd64 --no-cache --tag mrcieu/twosamplemr:multiarch .
+    GITHUB_PAT="$(gh auth token)" docker buildx build --pull --platform linux/arm64,linux/amd64 --no-cache --secret id=github_pat,env=GITHUB_PAT --tag mrcieu/twosamplemr:multiarch .
 
 build-cached:
-    docker buildx build --pull --platform linux/arm64,linux/amd64 --tag mrcieu/twosamplemr:multiarch .
+    GITHUB_PAT="$(gh auth token)" docker buildx build --pull --platform linux/arm64,linux/amd64 --secret id=github_pat,env=GITHUB_PAT --tag mrcieu/twosamplemr:multiarch .
 
 test:
     rm -f .RData

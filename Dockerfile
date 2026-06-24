@@ -34,4 +34,5 @@ RUN printf '%s\n' \
 # be built will be obtained).
 
 RUN --mount=type=bind,source=build.R,target=/tmp/build.R \
-    Rscript /tmp/build.R
+    --mount=type=secret,id=github_pat \
+    GITHUB_PAT="$(cat /run/secrets/github_pat 2>/dev/null)" Rscript /tmp/build.R
