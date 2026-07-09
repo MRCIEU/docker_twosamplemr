@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1.11
 # enable docker linting
 # check=error=true
-FROM rocker/r-ver:4.6.0
+FROM rocker/r-ver:4.6.1
 WORKDIR /usr/local/src/myscripts
 RUN printf '%s\n' \
         'Acquire::Retries "5";' \
