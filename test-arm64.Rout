@@ -21,7 +21,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2026-10-08 15:44:57 UTC"
+[1] "2026-10-08 16:00:09 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -545,4 +545,4 @@ TwoSampleMR version 0.7.12
 > 
 > proc.time()
    user  system elapsed 
-  0.635   0.645   1.928 
+  0.645   0.549   1.935 
