@@ -65,7 +65,19 @@ download.file(
   twosamplemr_tarball,
   quiet = TRUE
 )
-install.packages(twosamplemr_tarball, repos = NULL, type = "source")
+# R CMD build the GitHub archive so the vignettes are built (they use cached
+# data in inst/extdata, so no OpenGWAS access is needed)
+twosamplemr_src <- file.path(tempdir(), "twosamplemr_src")
+untar(twosamplemr_tarball, exdir = twosamplemr_src)
+owd <- setwd(tempdir())
+build_status <- system2(
+  file.path(R.home("bin"), "R"),
+  c("CMD", "build", "--no-manual", list.dirs(twosamplemr_src, recursive = FALSE))
+)
+setwd(owd)
+stopifnot(build_status == 0)
+twosamplemr_built <- file.path(tempdir(), paste0("TwoSampleMR_", sub("^v", "", twosamplemr_tag), ".tar.gz"))
+install.packages(twosamplemr_built, repos = NULL, type = "source")
 stopifnot(packageVersion("TwoSampleMR") == sub("^v", "", twosamplemr_tag))
 
 # Uninstall pak
