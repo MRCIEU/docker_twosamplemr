@@ -41,5 +41,32 @@ pak::pkg_install("TwoSampleMR", dependencies = TRUE)
 # install mr.raps Suggests packages from BioConductor
 pak::pkg_install(c("bumphunter", "TxDb.Hsapiens.UCSC.hg38.knownGene"))
 
+# Overwrite the R-universe TwoSampleMR with its latest GitHub release built
+# from source, so we needn't wait for R-universe to rebuild. All dependencies
+# are already installed above, and installing from a local tarball with
+# repos = NULL ignores the Remotes field (which would otherwise make pak build
+# MRMix, MRPRESSO, RadialMR, etc. from GitHub source).
+gh_headers <- c(Accept = "application/vnd.github+json")
+if (nzchar(Sys.getenv("GITHUB_PAT"))) {
+  gh_headers <- c(gh_headers, Authorization = paste("token", Sys.getenv("GITHUB_PAT")))
+}
+release_json <- tempfile(fileext = ".json")
+download.file(
+  "https://api.github.com/repos/MRCIEU/TwoSampleMR/releases/latest",
+  release_json,
+  headers = gh_headers,
+  quiet = TRUE
+)
+twosamplemr_tag <- jsonlite::fromJSON(release_json)$tag_name
+message("Installing TwoSampleMR ", twosamplemr_tag, " from GitHub source")
+twosamplemr_tarball <- file.path(tempdir(), paste0("TwoSampleMR_", twosamplemr_tag, ".tar.gz"))
+download.file(
+  sprintf("https://github.com/MRCIEU/TwoSampleMR/archive/refs/tags/%s.tar.gz", twosamplemr_tag),
+  twosamplemr_tarball,
+  quiet = TRUE
+)
+install.packages(twosamplemr_tarball, repos = NULL, type = "source")
+stopifnot(packageVersion("TwoSampleMR") == sub("^v", "", twosamplemr_tag))
+
 # Uninstall pak
 remove.packages("pak")

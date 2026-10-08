@@ -26,9 +26,9 @@ RUN printf '%s\n' \
         pandoc && \
     rm -rf /var/lib/apt/lists/*
 
-# Wait until MRCIEU R-Universe has built latest version of the TwoSampleMR binary
-# Should be 1 hour or maybe overnight
-# Check https://mrcieu.r-universe.dev/TwoSampleMR
+# Dependencies come from MRCIEU R-Universe and CRAN binaries, then TwoSampleMR
+# itself is installed from source from its latest GitHub release (see build.R),
+# so there is no need to wait for R-Universe to rebuild TwoSampleMR.
 # I set the HTTPUserAgent option in order to obtain binary packages from the
 # Public Posit Package Manager (otherwise source packages which will have to 
 # be built will be obtained).
