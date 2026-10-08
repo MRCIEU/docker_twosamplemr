@@ -31,7 +31,12 @@ pak::repo_add(CRAN = paste0("https://packagemanager.posit.co/cran/__linux__/nobl
 # built packages rather than recompiling from GitHub source.
 pak::repo_add(universe = "https://mrcieu.r-universe.dev")
 
+# Binary Bioconductor packages from Posit Public Package Manager, pinned by date.
+# pak builds its Bioconductor repo URLs from BioC_mirror (without it, it uses
+# bioconductor.posit.co which serves source); BIOCONDUCTOR_CONFIG_FILE is only
+# read by BiocManager.
 options(
+  BioC_mirror = paste0("https://packagemanager.posit.co/bioconductor/__linux__/noble/", cran_bioc_date),
   BIOCONDUCTOR_CONFIG_FILE = paste0("https://packagemanager.posit.co/bioconductor/", cran_bioc_date, "/config.yaml")
 )
 
