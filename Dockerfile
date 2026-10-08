@@ -35,4 +35,5 @@ RUN printf '%s\n' \
 
 RUN --mount=type=bind,source=build.R,target=/tmp/build.R \
     --mount=type=secret,id=github_pat \
-    GITHUB_PAT="$(cat /run/secrets/github_pat 2>/dev/null)" Rscript /tmp/build.R
+    GITHUB_PAT="$(cat /run/secrets/github_pat 2>/dev/null)" Rscript /tmp/build.R && \
+    rm -rf /tmp/Rtmp*
