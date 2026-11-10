@@ -17,6 +17,7 @@ RUN printf '%s\n' \
         libxml2-dev \
         libssl-dev \
         libgmp3-dev \
+        libicu-dev \
         cmake \
         libcairo2-dev \
         libxt-dev \
