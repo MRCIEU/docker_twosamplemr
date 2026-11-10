@@ -82,7 +82,9 @@ download.file(
 # R CMD build the GitHub archive so the vignettes are built (they use cached
 # data in inst/extdata, so no OpenGWAS access is needed)
 twosamplemr_src <- file.path(tempdir(), "twosamplemr_src")
-untar(twosamplemr_tarball, exdir = twosamplemr_src)
+# Use R's internal tar: GNU tar 1.35 on Ubuntu 26.04 fails to extract under
+# Docker's seccomp profile ("Cannot open: Function not implemented")
+untar(twosamplemr_tarball, exdir = twosamplemr_src, tar = "internal")
 owd <- setwd(tempdir())
 build_status <- system2(
   file.path(R.home("bin"), "R"),
