@@ -19,12 +19,21 @@ install.packages(
 # Set the Bioconductor version to prevent defaulting to a newer version:
 Sys.setenv("R_BIOC_VERSION" = "3.23")
 
+# Ubuntu codename of the base image (e.g. "noble", "resolute"), read at build
+# time so the PPM URLs follow rocker when it moves to a new Ubuntu LTS.
+# Binaries for the wrong release fail to load (e.g. stringi linked to a
+# different libicu version).
+os_release <- readLines("/etc/os-release")
+ubuntu_codename <- sub("^VERSION_CODENAME=", "", grep("^VERSION_CODENAME=", os_release, value = TRUE))
+stopifnot(length(ubuntu_codename) == 1L, nzchar(ubuntu_codename))
+message("Using Posit Package Manager binaries for Ubuntu ", ubuntu_codename)
+
 # Binary CRAN packages from Posit Public Package Manager, pinned by date.
-# The __linux__/noble form is what lets pak negotiate Ubuntu Noble binaries;
+# The __linux__/<codename> form is what lets pak negotiate Ubuntu binaries;
 # a hardcoded /bin/linux/... path is served as SOURCE and silently defeats this.
 # These URLs are architecture-agnostic: pak requests the correct binary for
 # whichever platform (x86_64 or aarch64) the image is being built on.
-pak::repo_add(CRAN = paste0("https://packagemanager.posit.co/cran/__linux__/noble/", cran_bioc_date))
+pak::repo_add(CRAN = paste0("https://packagemanager.posit.co/cran/__linux__/", ubuntu_codename, "/", cran_bioc_date))
 
 # Prebuilt MRCIEU packages (TwoSampleMR, MRPRESSO, MRMix, RadialMR, ieugwasr, ...)
 # come from R-universe, so installing TwoSampleMR by name below takes them as
@@ -36,7 +45,7 @@ pak::repo_add(universe = "https://mrcieu.r-universe.dev")
 # bioconductor.posit.co which serves source); BIOCONDUCTOR_CONFIG_FILE is only
 # read by BiocManager.
 options(
-  BioC_mirror = paste0("https://packagemanager.posit.co/bioconductor/__linux__/noble/", cran_bioc_date),
+  BioC_mirror = paste0("https://packagemanager.posit.co/bioconductor/__linux__/", ubuntu_codename, "/", cran_bioc_date),
   BIOCONDUCTOR_CONFIG_FILE = paste0("https://packagemanager.posit.co/bioconductor/", cran_bioc_date, "/config.yaml")
 )
 
