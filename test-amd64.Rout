@@ -21,7 +21,7 @@ Type 'q()' to quit R.
 > 
 > # Record date and time this was run
 > Sys.time()
-[1] "2026-11-10 15:16:04 UTC"
+[1] "2026-11-11 08:14:15 UTC"
 > 
 > # List all installed packages
 > installed.packages()[, c("Package", "Version")]
@@ -300,7 +300,7 @@ DelayedArray                      "0.38.2"
 DEoptimR                          "1.2-2"     
 Deriv                             "4.3.6"     
 desc                              "1.4.3"     
-diffobj                           "0.3.9"     
+diffobj                           "0.3.10"    
 digest                            "0.6.39"    
 doBy                              "4.7.2"     
 docopt                            "0.7.2"     
@@ -336,7 +336,7 @@ htmltools                         "0.5.9"
 htmlwidgets                       "1.6.4"     
 httpcode                          "0.3.0"     
 httr                              "1.4.9"     
-ieugwasr                          "1.2.0"     
+ieugwasr                          "1.2.1"     
 IRanges                           "2.46.0"    
 isoband                           "0.3.0"     
 iterators                         "1.0.14"    
@@ -543,4 +543,4 @@ TwoSampleMR version 0.7.14
 > 
 > proc.time()
    user  system elapsed 
-  3.585   0.227   6.210 
+  3.366   0.263   2.893 
